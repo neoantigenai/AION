@@ -1,0 +1,62 @@
+/* Contact page refined styles */
+:root{
+  --primary: #8a2be2; /* blueviolet */
+  --cta: rgb(141,141,0); /* gold */
+  --cta-dark: rgb(93,93,0);
+  --muted: #6b6b6b;
+  --bg: #ffffff;
+}
+
+/* Hero */
+.contact-page .hero{ padding: 70px 0 35px; background: linear-gradient(180deg, rgba(138,43,226,0.04), rgba(138,43,226,0.01)); }
+.contact-page .hero h1{ color: var(--primary); font-weight: 800; font-size: 36px; margin-bottom: 6px; }
+.contact-page .hero .lead{ color: var(--muted); margin-top: 6px; }
+
+/* Contact cards */
+.contact-cards .contact-card{ border-radius: 12px; border: 1px solid rgba(0,0,0,0.04); box-shadow: 0 6px 18px rgba(0,0,0,0.04); transition: transform .18s ease, box-shadow .18s ease; }
+.contact-cards .contact-card:hover{ transform: translateY(-6px); box-shadow: 0 14px 35px rgba(0,0,0,0.06); }
+.contact-cards .contact-card .icon{ font-size:28px; color:var(--primary); margin-bottom:10px; }
+.contact-cards .contact-card h5{ margin-bottom:4px; }
+.contact-cards .contact-card p, .contact-cards .contact-card a{ margin-bottom:0; color:#333; }
+
+/* Form */
+.form-card, .info-card, .faq-card, .team-card{ border-radius: 12px; box-shadow: 0 8px 28px rgba(0,0,0,0.06); }
+.form-card .card-body{ padding: 28px; }
+.form-card .card-title{ font-size:20px; font-weight:700; }
+
+.form-control{ border-radius: 8px; border: 1px solid #eee; padding: 12px; }
+.form-control:focus{ box-shadow: 0 8px 30px rgba(138,43,226,0.08); border-color: var(--primary); }
+
+.btn.cta{ background: var(--cta); color: #fff; border-radius: 8px; padding: 10px 20px; border: none; font-weight:700; }
+.btn.cta:hover, .btn.cta:focus{ background: var(--cta-dark); transform: translateY(-3px); box-shadow: 0 12px 30px rgba(93,93,0,0.14); }
+
+/* FAQ */
+.faq { margin-top: .5rem; }
+.faq-question{ display:block; width:100%; text-align:left; padding:12px 14px; border-radius:6px; background:#f7f7fb; border:1px solid #eee; font-weight:600; color:#222; margin-bottom:8px; }
+.faq-answer{ display:none; padding:12px 14px; border-radius:6px; border:1px solid #f0f0f6; margin-bottom:8px; background:#fff; color:#333; }
+.faq-question.active{ background: linear-gradient(90deg, rgba(138,43,226,0.06), rgba(138,43,226,0.02)); }
+
+/* Map */
+.map-wrap iframe{ border-radius:8px; border:0; }
+
+/* Team */
+.team-card .media img{ width:48px; height:48px; object-fit:cover; }
+
+#formStatus{ color: var(--primary); font-weight:600; }
+
+/* small screens */
+@media (max-width: 767px){
+  .form-card .card-body{ padding: 18px; }
+  .contact-page .hero h1{ font-size: 28px; }
+  .contact-cards .contact-card{ margin-bottom:14px; }
+}
+
+/* Accessibility helpers */
+.invalid-feedback{ display: none; color: #c53030; }
+.is-invalid + .invalid-feedback{ display: block; }
+
+/* Header scrolled state */
+.header_section{ z-index: 9999; }
+.header_section.scrolled{ background: rgba(255,255,255,0.96); box-shadow: 0 2px 20px rgba(0,0,0,0.06); }
+
+

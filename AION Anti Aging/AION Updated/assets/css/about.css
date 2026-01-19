@@ -1,0 +1,322 @@
+/* ============================================
+   AION ABOUT PAGE REFINEMENTS
+   Aligning with Main Design System
+   ============================================ */
+
+body.about-page {
+    background-color: var(--light);
+    color: #333;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Hero Section */
+.about-hero {
+    padding: 120px 0 80px;
+    background: var(--light);
+    position: relative;
+    overflow: hidden;
+}
+
+.about-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at top right, var(--primary-glow), transparent);
+    pointer-events: none;
+}
+
+.subtitle {
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+/* Framework/Research Pillars */
+.framework-section {
+    background: white;
+}
+
+.acc-item {
+    background: #f8f9fa;
+    border: 1px solid rgba(138, 43, 226, 0.1);
+    border-radius: 20px;
+    margin-bottom: 1.2rem;
+    padding: 1.5rem;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+}
+
+.acc-item:hover {
+    transform: translateX(10px);
+    background: white;
+    box-shadow: 0 10px 30px rgba(138, 43, 226, 0.1);
+    border-color: var(--primary-light);
+}
+
+.acc-item.active {
+    background: var(--gradient-primary);
+    color: white;
+    border-color: transparent;
+    box-shadow: 0 15px 35px rgba(138, 43, 226, 0.3);
+}
+
+.acc-item.active .pillar-number,
+.acc-item.active .acc-header h5 {
+    color: white;
+}
+
+.pillar-number {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--primary);
+}
+
+.acc-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    opacity: 0;
+}
+
+.acc-item.active .acc-content {
+    max-height: 200px;
+    opacity: 1;
+    margin-top: 10px;
+}
+
+/* India Context Slider */
+.india-context-slider {
+    background: #f1f3f5;
+    padding: 80px 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 60px;
+}
+
+.slider-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    transition: all 0.5s ease;
+    min-height: 400px;
+}
+
+.slider-card {
+    flex: 0 0 30%;
+    transition: all 0.5s ease;
+    opacity: 0.4;
+    transform: scale(0.85);
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1);
+}
+
+.slider-card.active {
+    opacity: 1;
+    transform: scale(1);
+    flex: 0 0 45%;
+    z-index: 2;
+    box-shadow: 0 20px 60px rgba(138, 43, 226, 0.2);
+}
+
+.card-content {
+    position: relative;
+    height: 350px;
+}
+
+.card-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 30px;
+    background: linear-gradient(transparent, rgba(26, 0, 51, 0.9));
+    color: white;
+    text-align: center;
+}
+
+.card-overlay h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* Slider Navigation Buttons */
+.slider-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--gradient-glow);
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px var(--primary-glow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider-nav:hover {
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 8px 25px var(--primary-glow);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background: var(--primary);
+    width: 25px;
+    border-radius: 10px;
+}
+
+/* Graph Section */
+.graph-section {
+    background: var(--dark) !important;
+}
+
+/* Image Viewer */
+.image-viewer img {
+    border-radius: 24px;
+    box-shadow: 0 25px 50px rgba(138, 43, 226, 0.15);
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.image-viewer img:hover {
+    transform: scale(1.02);
+}
+
+/* Clean up navbar styles */
+.custom_nav-container.navbar-expand-lg .navbar-nav .nav-link {
+    color: #333 !important;
+}
+
+.custom_nav-container.navbar-expand-lg .navbar-nav .nav-link:hover {
+    color: var(--primary) !important;
+}
+
+.header_section.scrolled {
+    background: rgba(255, 255, 255, 0.98);
+}
+
+/* ============================
+   FOOTER STYLES
+   ============================ */
+.info_section {
+    background-color: rgb(51, 0, 99);
+    color: #ffffff;
+    padding: 90px 0 45px 0;
+}
+
+.info_section h5 {
+    color: #ffffff;
+    margin-bottom: 25px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.info_section p, 
+.info_section a,
+.info_section .text-white-50 {
+    color: rgba(255, 255, 255, 0.6) !important;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.info_section a:hover {
+    color: #ffffff !important;
+    text-decoration: none;
+}
+
+.footer-brand .logo-box span {
+    font-size: 24px;
+    font-weight: 800;
+    background: var(--gradient-glow);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.social_box a {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.social_box a:hover {
+    background: var(--gradient-glow);
+    transform: translateY(-3px);
+}
+
+.footer_section {
+    background-color: rgb(19, 0, 36);
+    padding: 15px 0;
+    font-weight: 500;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.footer_section p {
+    padding: 20px 65px;
+    color: #fbfcfd;
+    margin: 0 auto;
+    text-align: center;
+    border-top: 1px solid #ffffff;
+    font-size: 14px;
+}

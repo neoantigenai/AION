@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research & Science | AION</title>
+
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Carousel CSS -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+    <!-- Core Styles -->
+    <link rel="stylesheet" href="assets/css/bootstrap.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+
+    <!-- Page Specific Style -->
+    <link rel="stylesheet" href="assets/css/longevity-program.css">
+    <link rel="stylesheet" href="assets/css/research.css">
+</head>
+
+<body class="research-page">
+
+    <!-- Navbar (Consistent with Longevity Page) -->
+    <header class="header_section sticky-top">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg custom_nav-container pt-1 pb-1">
+                <a class="navbar-brand" href="index.html">
+                    <span class="brand-text">AION</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="longevity-program.html" id="longevityDropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">Longevity Program</a>
+                            <div class="dropdown-menu" aria-labelledby="longevityDropdown">
+                                <a class="dropdown-item" href="longevity-program.html#practitioners">Longevity Practitioners</a>
+                                <a class="dropdown-item" href="index.html#programs">Overview</a>
+                                <a class="dropdown-item" href="../../AION New Pages/Protocol Page/protocol.html">Protocols</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="diagnosticsDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Diagnostics</a>
+                            <div class="dropdown-menu" aria-labelledby="diagnosticsDropdown">
+                                <a class="dropdown-item" href="diagnostics.html">Overview</a>
+                                <a class="dropdown-item" href="blood-tests-detail.html">Extensive Blood Tests</a>
+                                <a class="dropdown-item" href="genetic-test-detail.html">Genetic & Epigenetic Testing</a>
+                                <a class="dropdown-item" href="gut-microbiota-detail.html">Gut Microbiome Analysis</a>
+                                <a class="dropdown-item" href="face-scan-detail.html">Cell Scan & Face Scan</a>
+                                <a class="dropdown-item" href="bca-detail.html">Body Composition (BCA)</a>
+                                <a class="dropdown-item" href="bmd-detail.html">Bone Mineral Density (BMD)</a>
+                                <a class="dropdown-item" href="endopat-detail.html">ENDOPAT</a>
+                                <a class="dropdown-item" href="biological-clock-detail.html">Biological Clock</a>
+                                <a class="dropdown-item" href="oligoscan-detail.html">OLIGOSCAN</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="offeringsDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Offerings</a>
+                            <div class="dropdown-menu" aria-labelledby="offeringsDropdown">
+                                <a class="dropdown-item" href="diagnostics.html">Diagnostics</a>
+                                <a class="dropdown-item" href="longevity-plus-program.html">Longevity Plus Program</a>
+                            </div>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="blog.html">Outreach</a></li>
+                        <li class="nav-item"><a class="nav-link nav-contact-btn text-white" href="contact.html">Contact
+                                Us</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section: The Bharat Study -->
+    <section class="research_hero">
+        <div class="hero_bg_animation"></div> <!-- Map Background via CSS -->
+        <div class="container relative-z">
+            <div class="row align-items-center">
+                <div class="col-lg-8" data-aos="fade-right" data-aos-duration="1200">
+                    <p class="hero_subtitle">Pioneering Indian Longevity</p>
+                    <h1 class="hero_title">The <span class="text-gradient">Bharat</span> Study</h1>
+                    <p class="hero_desc">
+                        A first-of-its-kind longitudinal study mapping the biomarkers of aging in the Indian population.
+                        We are building the largest multi-omics dataset to solve death.
+                    </p>
+                    <div class="hero_btns">
+                        <a href="#cohorts" class="btn-glow">View Cohort Data</a>
+                        <a href="#join" class="btn-outline-glow">Join the Study</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 d-none d-lg-block" data-aos="fade-left" data-aos-duration="1500">
+                    <!-- Hero Image -->
+                    <img src="assets/images/hero-img.png" alt="Research" class="img-fluid hero-side-img">
+                </div>
+            </div>
+        </div>
+        <div class="scroll_indicator">
+            <span>Scroll to Discover</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Infinite Horizontal Auto-Scroll Marquee -->
+    <section class="marquee_section py-5" data-aos="fade-up">
+        <div class="marquee_container">
+            <div class="marquee_track">
+                <!-- First set of images -->
+                <div class="marquee_item">
+                    <img src="https://wp-media.petersons.com/blog/wp-content/uploads/2019/01/10123538/iStock-905458072.jpg" alt="Cohorts">
+                    <div class="marquee_caption">
+                        <h5>Cohorts</h5>
+                        <p>Diverse population sampling</p>
+                    </div>
+                </div>
+                <div class="marquee_item">
+                    <img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/What_is_Data_Analysis.jpg" alt="Bio-Banking">
+                    <div class="marquee_caption">
+                        <h5>Data Analysis</h5>
+                        <p>Cryogenic sample storage</p>
+                    </div>
+                </div>
+                <div class="marquee_item">
+                    <img src="https://saiinstitutes.in/wp-content/uploads/2024/04/Practical-Nursing.jpg" alt="Patient Care">
+                    <div class="marquee_caption">
+                        <h5>Patient Care</h5>
+                        <p>Clinical Exams</p>
+                    </div>
+                </div>
+                <div class="marquee_item">
+                    <img src="index page/images/i4.avif" alt="Genomics">
+                    <div class="marquee_caption">
+                        <h5>Genomics</h5>
+                        <p>Whole genome sequencing</p>
+                    </div>
+                </div>
+                <div class="marquee_item">
+                    <img src="index page/images/i5.avif" alt="AI Insights">
+                    <div class="marquee_caption">
+                        <h5>AI Insights</h5>
+                        <p>Machine learning models</p>
+                    </div>
+                </div>
+                <div class="marquee_item">
+                    <img src="index page/images/i6.avif" alt="Interventions">
+                    <div class="marquee_caption">
+                        <h5>Interventions</h5>
+                        <p>Personalized stacks</p>
+                    </div>
+                </div>
+
+                <!-- Duplicated set for seamless loop -->
+                <div class="marquee_item">
+                    <img src="index page/images/i1.avif" alt="Cohorts">
+                    <div class="marquee_caption">
+                        <h5>Cohorts</h5>
+                        <p>Diverse population sampling</p>
+                    </div>
+                </div>
+                <div class="marquee_item">
+                    <img src="index page/images/i2.avif" alt="Bio-Banking">
+                    <div class="marquee_caption">
+                        <h5>Data Analysis</h5>
+                        <p>Cryogenic sample storage</p>
+                    </div>
+                </div>
+                <div class="marquee_item">
+                    <img src="index page/images/i3.avif" alt="Patient Care">
+                    <div class="marquee_caption">
+                        <h5>Patient Care</h5>
+                        <p>Clinical Exams</p>
+                    </div>
+                </div>
+                <div class="marquee_item">
+                    <img src="index page/images/i4.avif" alt="Genomics">
+                    <div class="marquee_caption">
+                        <h5>Genomics</h5>
+                        <p>Whole genome sequencing</p>
+                    </div>
+                </div>
+                <div class="marquee_item">
+                    <img src="index page/images/i5.avif" alt="AI Insights">
+                    <div class="marquee_caption">
+                        <h5>AI Insights</h5>
+                        <p>Machine learning models</p>
+                    </div>
+                </div>
+                <div class="marquee_item">
+                    <img src="index page/images/i6.avif" alt="Interventions">
+                    <div class="marquee_caption">
+                        <h5>Interventions</h5>
+                        <p>Personalized stacks</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Phase 1 Grid -->
+    <section class="research_phase py-5" id="phase1">
+        <div class="container">
+            <div class="phase_header mb-5" data-aos="fade-right">
+                <h5 class="text-neon">PHASE 01</h5>
+                <h2 class="text-dark">Establishing the <span class="text-gradient">Baseline</span></h2>
+                <p class="text-muted">Comprehensive data collection across multiple biological layers.</p>
+            </div>
+
+            <div class="row">
+                <!-- Card 1 -->
+                <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="img_card" style="background-image: url('https://www.reedtalentsolutions.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Ft3iyf9hceuvl%2F4sVYWJWKzb7Ska0QmItEEV%2Fed9a8489ceca64681b0b56f997fbeaf0%2FPromoting-age-diversity-SQUARE.gif&w=3840&q=75');">
+                        <div class="img_card_overlay">
+                            <h3 class="card_num_overlay">01.</h3>
+                            <h4>Cohorts</h4>
+                            <p>Recruiting diverse age groups (20-80). Diverse population sampling.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="img_card" style="background-image: url('https://cdn.shopify.com/s/files/1/0285/7979/0981/t/36/assets/how-does-cryogenic-work-1686927811119.jpg?v=1686927812');">
+                        <div class="img_card_overlay">
+                            <h3 class="card_num_overlay">02.</h3>
+                            <h4>Bio-Banking</h4>
+                            <p>Cryogenic storage. Advanced clinical assessment.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="img_card" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHidoVskVts0l-mmniuKoYhSjANgZdjajFJg&s');">
+                        <div class="img_card_overlay">
+                            <h3 class="card_num_overlay">03.</h3>
+                            <h4>Baseline Health</h4>
+                            <p>Lifestyle and environmental factors. Full-body phenotypes.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="img_card" style="background-image: url('https://www.news-medical.net/images/appnotes/ImageForAppNote_5358_17296831226356161.jpg');">
+                        <div class="img_card_overlay">
+                            <h3 class="card_num_overlay">04.</h3>
+                            <h4>Genomics</h4>
+                            <p>Comprehensive biomarker discovery. Whole genome sequencing.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Phase 2 Grid -->
+    <section class="research_phase py-5 bg-light" id="phase2">
+        <div class="container">
+            <div class="phase_header mb-5" data-aos="fade-right">
+                <h5 class="text-neon">PHASE 02</h5>
+                <h2 class="text-dark">Interventions & <span class="text-gradient">Monitoring</span></h2>
+                <p class="text-muted">Testing protocols to slow and reverse biological aging.</p>
+            </div>
+
+            <div class="row">
+                <!-- Card 5 -->
+                <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="img_card" style="background-image: url('https://s3.ap-southeast-2.amazonaws.com/nzdoctor.files/production/public/2025-03/Ai_in_Health_CR_Suriphon%20Singha_on_iStock-1728138175.jpg');">
+                        <div class="img_card_overlay">
+                            <h3 class="card_num_overlay">05.</h3>
+                            <h4>AI Insights</h4>
+                            <p>Machine learning models. Predictive aging algorithms.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 6 -->
+                <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="img_card" style="background-image: url('https://www.cell.com/cms/10.1016/j.stem.2025.09.008/asset/d6c487a3-a0f6-4610-bd1c-8f01e255cb8c/main.assets/fx1_lrg.jpg');">
+                        <div class="img_card_overlay">
+                            <h3 class="card_num_overlay">06.</h3>
+                            <h4>Interventions</h4>
+                            <p>Supplements & Geroprotectors. Personalized stacks.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 7 -->
+                <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="img_card" style="background-image: url('https://i0.wp.com/www.kinetic-revolution.com/wp-content/uploads/2013/01/lactate_threshold_testing_female_runner_feat.jpg?resize=555%2C500&ssl=1');">
+                        <div class="img_card_overlay">
+                            <h3 class="card_num_overlay">07.</h3>
+                            <h4>Lifestyle</h4>
+                            <p>Hypoxic training. Nutritional protocols & Sleep optimization.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 8 -->
+                <div class="col-md-3 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="img_card" style="background-image: url('https://www.adept-it.com.au/wp-content/uploads/2024/06/person-in-suit-holding-a-notebook-with-24-hour-continuous-monitoring-support-1024x576.jpg');">
+                        <div class="img_card_overlay">
+                            <h3 class="card_num_overlay">08.</h3>
+                            <h4>Re-Testing</h4>
+                            <p>Continuous monitoring. Validating efficacy.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Personalized Medicine Divider -->
+    <section class="personalized_section py-5 bg-black">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-5 mb-4 mb-md-0" data-aos="fade-right">
+                    <img src="https://ideyalabs.com/images/resource/health-about.webp" alt="Personalized Medicine"
+                        class="img-fluid rounded-circle border-glow" style="max-height: 300px;">
+                </div>
+                <div class="col-md-7" data-aos="fade-left">
+                    <h2 class="display-4 text-dark font-weight-bold mb-3">enable <br><span
+                            class="text-gradient">personalized medicine.</span></h2>
+                    <p class="text-muted lead">
+                        Moving from "sick care" to precision longevity. We tailor interventions to your unique
+                        biological signature.
+                    </p>
+                    <div class="stats_row d-flex mt-4">
+                        <div class="stat_item mr-5">
+                            <h3 class="text-dark mb-0">50M+</h3>
+                            <small class="text-muted">Data Points</small>
+                        </div>
+                        <div class="stat_item">
+                            <h3 class="text-dark mb-0">10k+</h3>
+                            <small class="text-muted">Participants</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Multi-Omics Analysis Section -->
+    <section class="multi_omics_section py-5">
+        <div class="container">
+            <div class="section_header text-center mb-5">
+                <h2 class="text-dark">Multi-Omics <span class="text-gradient">Analysis</span></h2>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-5 order-lg-2" data-aos="fade-left">
+                    <!-- Button List -->
+                    <div class="omics_list_buttons">
+                        <!-- Item 1 -->
+                        <div class="omics_btn active" data-target="proteomics">
+                            <div class="omics_thumb">
+                                <img src="https://www.msaid.de/hs-fs/hubfs/MSAID_Proteomics.jpg?width=1000&height=679&name=MSAID_Proteomics.jpg" alt="Proteomics">
+                            </div>
+                            <div class="omics_info">
+                                <h5>Proteomics</h5>
+                                <small>Untargeted discovery on serum samples</small>
+                            </div>
+                            <div class="omics_toggle">
+                                <i class="fas fa-minus"></i>
+                            </div>
+                        </div>
+                        <!-- Item 2 -->
+                        <div class="omics_btn" data-target="metabolomics">
+                            <div class="omics_thumb">
+                                <img src="https://www.kindpng.com/picc/m/728-7289577_metabolomics-clipart-png-download-circle-transparent-png.png" alt="Metabolomics">
+                            </div>
+                            <div class="omics_info">
+                                <h5>Metabolomics</h5>
+                                <small>Comprehensive profiling of serum metabolites</small>
+                            </div>
+                            <div class="omics_toggle">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                        </div>
+                        <!-- Item 3 -->
+                        <div class="omics_btn" data-target="lipidomics">
+                            <div class="omics_thumb">
+                                <img src="https://metabolomicscentre.ca/wp-content/uploads/Global-Lipidomics.png" alt="Lipidomics">
+                            </div>
+                            <div class="omics_info">
+                                <h5>Lipidomics</h5>
+                                <small>Detailed lipid profiling</small>
+                            </div>
+                            <div class="omics_toggle">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                        </div>
+                        <!-- Item 4 -->
+                        <div class="omics_btn" data-target="epigenomics">
+                            <div class="omics_thumb">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsFAeIHiG24jozPb1rwEMdoEnK8I1__q0Oqw&s" alt="Epigenomics">
+                            </div>
+                            <div class="omics_info">
+                                <h5>Epigenomics</h5>
+                                <small>DNA methylation analysis</small>
+                            </div>
+                            <div class="omics_toggle">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                        </div>
+                        <!-- Item 5 -->
+                        <div class="omics_btn" data-target="metagenomics">
+                            <div class="omics_thumb">
+                                <img src="https://e7.pngegg.com/pngimages/595/111/png-clipart-phase-genomics-earth-microbiome-project-genome-metagenomics-world-wide-technology-soccer-park-orange-biology-thumbnail.png" alt="Metagenomics">
+                            </div>
+                            <div class="omics_info">
+                                <h5>Metagenomics</h5>
+                                <small>Gut microbiome analysis</small>
+                            </div>
+                            <div class="omics_toggle">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                        </div>
+                        <!-- Item 6 -->
+                        <div class="omics_btn" data-target="genomics">
+                            <div class="omics_thumb">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQD_pROUlf6uJiCoTV7o1zsFJ5xrnXvI7pofA&s" alt="Genomics">
+                            </div>
+                            <div class="omics_info">
+                                <h5>Genomics</h5>
+                                <small>Whole genome sequencing</small>
+                            </div>
+                            <div class="omics_toggle">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7 order-lg-1 text-center" data-aos="zoom-in" data-aos-duration="1500">
+                    <!-- Body Visual -->
+                    <div class="human_body_container">
+                        <div class="human_body_visual">
+                            <img src="assets/images/w-1.png" alt="Digital Human Body" class="body_img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stacked Goals Section -->
+    <section class="stack_section" id="goals">
+        <div class="container stack_container">
+            <div class="section_header text-center mb-5 sticky-header">
+                <h2 class="text-dark">Our Strategic <span class="text-gradient">Goals</span></h2>
+            </div>
+
+            <!-- Card 1: Decode -->
+            <!-- Card 1: Multiparametric analysis -->
+            <div class="stack_card card_1">
+                <div class="img_card" style="background-image: url('assets/images/abc.avif'); height: 100%;">
+                    <div class="img_card_overlay">
+                        <h3 class="card_num_overlay">01.</h3>
+                        <h4>Multiparametric analysis</h4>
+                        <p>Map the thousands of biomarkers that constitute biological aging. We use deep learning to
+                            understand the "noise" in your cells.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2: Engineer -->
+            <!-- Card 2: Advanced clinical assessment -->
+            <div class="stack_card card_2">
+                <div class="img_card" style="background-image: url('assets/images/abc1.avif'); height: 100%;">
+                    <div class="img_card_overlay">
+                        <h3 class="card_num_overlay">02.</h3>
+                        <h4>Advanced clinical assessment</h4>
+                        <p>Develop personalized interventions. From small molecules to lifestyle protocols, we engineer
+                            the path to youth.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3: Reverse -->
+            <!-- Card 3: Comprehensive biomarker discovery -->
+            <!-- Card 3: Lifestyle and environmental factors -->
+            <div class="stack_card card_3">
+                <div class="img_card" style="background-image: url('assets/images/i8.avif'); height: 100%;">
+                    <div class="img_card_overlay">
+                        <h3 class="card_num_overlay">03.</h3>
+                        <h4>Lifestyle and environmental factors</h4>
+                        <p>Analyze how your environment and daily choices impact your biological age and longevity
+                            trajectory.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4: Comprehensive biomarker discovery -->
+            <div class="stack_card card_4">
+                <div class="img_card" style="background-image: url('assets/images/abc2.avif'); height: 100%;">
+                    <div class="img_card_overlay">
+                        <h3 class="card_num_overlay">04.</h3>
+                        <h4>Comprehensive biomarker discovery</h4>
+                        <p>Validate results through longitudinal tracking. We don't just stop aging; we turn back the
+                            clock.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="research_cta py-5">
+        <div class="container text-center">
+            <h2 class="gradient-text mb-3">Be Part of History</h2>
+            <p class="text-muted mb-5 mx-auto" style="max-width: 600px;">
+                Join the AION Research Cohort. Contribute your data, access cutting-edge therapies, and help us solve
+                the problem of aging for all of humanity.
+            </p>
+            <a href="contact.html" class="btn-primary-glow">Apply for Cohort</a>
+        </div>
+    </section>
+
+    <!-- info section / footer -->
+    <section class="info_section ">
+        <div class="container">
+            <div class="row">
+                <!-- Logo & Social Column -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="footer-brand">
+                        <div class="logo-box mb-3">
+                            <span
+                                style="font-size: 24px; font-weight: 800; background: var(--gradient-glow); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">AION</span>
+                        </div>
+                        <p class="text-white-50">© 2025 AION<br>All rights reserved.</p>
+                        <div class="social_box mt-4">
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        </div>
+                        <h5 class="mt-4">Quick Links</h5>
+                        <p><a href="about.html" class="text-white hover-underline">About Us</a></p>
+                        <p><a href="contact.html" class="text-white hover-underline">Contact Us</a></p>
+                        <p><a href="#" class="text-white hover-underline">Privacy Policy</a></p>
+                    </div>
+                </div>
+
+                <!-- Gurugram Location -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="location-card">
+                        <h5 class="location-title">Gurugram</h5>
+                        <p class="text-white-50">Block A1, Tikri, Vipul World,<br>Sohna Road, Near GD Goenka Public
+                            School, Sector
+                            48,<br>Gurugram, Haryana-122018, India.</p>
+                        <p class="contact-info"><i class="fas fa-envelope mr-2"></i>info@theantiagingcentre.com</p>
+                        <p class="contact-info"><i class="fas fa-phone mr-2"></i>+91 11-408-44848</p>
+                        <div class="map-container mt-3">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3507.2!2d77.0562!3d28.4089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDI0JzMyLjAiTiA3N8KwMDMnMjIuMyJF!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin"
+                                width="100%" height="120" style="border:0; border-radius: 8px;" allowfullscreen=""
+                                loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pune Location -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="location-card">
+                        <h5 class="location-title">Pune</h5>
+                        <p class="text-white-50">2nd Floor, Kumar Prism,<br>Amanora road, opp. Fab India,<br>Hadapsar,
+                            Pune 411028, Maharashtra.</p>
+                        <p class="contact-info"><i class="fas fa-envelope mr-2"></i>info@theantiagingcentre.com</p>
+                        <p class="contact-info"><i class="fas fa-phone mr-2"></i>+91 11-408-44840</p>
+                        <div class="map-container mt-3">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.3!2d73.9312!3d18.5089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDMwJzMyLjAiTiA3M8KwNTUnNTIuMyJF!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin"
+                                width="100%" height="120" style="border:0; border-radius: 8px;" allowfullscreen=""
+                                loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Delhi Location -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="location-card">
+                        <h5 class="location-title">Delhi</h5>
+                        <p class="text-white-50">S-79, Ground Floor, Greater Kailash-1, New Delhi-110048, India</p>
+                        <p class="contact-info"><i class="fas fa-envelope mr-2"></i>info@theantiagingcentre.com</p>
+                        <p class="contact-info"><i class="fas fa-phone mr-2"></i>+91 80-473-60047</p>
+                        <div class="map-container mt-3">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.8!2d77.2312!3d28.5489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDMyJzU2LjAiTiA3N8KwMTMnNTIuMyJF!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin"
+                                width="100%" height="120" style="border:0; border-radius: 8px;" allowfullscreen=""
+                                loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end info_section -->
+
+    <!-- footer section -->
+    <section class="container-fluid footer_section">
+        <p>
+            Copyright © 2025 AION – Developed by <strong>Dr. Kamal Rawal</strong>.
+        </p>
+    </section>
+    <!-- footer section -->
+
+    <script src="assets/js/jquery-3.4.1.min.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/research.js"></script>
+</body>
+
+</html>

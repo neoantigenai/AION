@@ -1,0 +1,299 @@
+/* ============================================
+   AION RESPONSIVE DESIGN SYSTEM
+   Mobile-First Responsive Styles
+   ============================================ */
+
+/* Extra Large Devices (1200px and up) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1170px;
+    }
+}
+
+/* Large Devices (1120px and below) */
+@media (max-width: 1120px) {
+    .hero_area {
+        height: auto;
+    }
+
+    .slider_section {
+        padding: 50px 0;
+    }
+
+    .slider_section .detail-box h1 {
+        font-size: 48px;
+    }
+}
+
+/* Medium-Large Devices (992px and below) - Tablets */
+@media (max-width: 992px) {
+    .user_option {
+        flex-direction: column;
+    }
+
+    .custom_nav-container .nav_search-btn {
+        background-position: center;
+        margin-top: 10px;
+    }
+
+    .user_option a {
+        margin-bottom: 10px;
+    }
+
+    .custom_nav-container.navbar-expand-lg .navbar-nav .nav-link {
+        padding: 10px 15px;
+        text-align: left;
+    }
+
+    .custom_nav-container.navbar-expand-lg .navbar-nav .nav-link:not(.login-btn)::after {
+        display: none;
+    }
+
+    .login-btn {
+        margin: 15px 0 !important;
+        text-align: center;
+        justify-content: center;
+    }
+
+    /* Header Mobile */
+    .header_section {
+        background: rgba(255, 255, 255, 0.98) !important;
+    }
+
+    .navbar-collapse {
+        background: rgba(255, 255, 255, 0.98);
+        padding: 20px;
+        border-radius: 16px;
+        margin-top: 15px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Hero Section Mobile */
+    .slider_section .detail-box h1 {
+        font-size: 36px;
+        line-height: 1.2;
+    }
+
+    .slider_section .detail-box p {
+        font-size: 16px;
+    }
+
+    /* Particles smaller on mobile */
+    .particle {
+        width: 3px;
+        height: 3px;
+    }
+}
+
+/* Medium Devices (768px and below) - Tablets Portrait */
+@media (max-width: 768px) {
+
+    /* Footer Layout */
+    .info_section .col-lg-3,
+    .info_section .col-md-6 {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .info_section .col-lg-3:last-child {
+        margin-bottom: 0;
+    }
+
+    .info_section .footer-brand,
+    .info_section .location-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .location-title::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .info_section .social_box {
+        justify-content: center;
+    }
+
+    .info_section .social_box a {
+        margin: 0 8px;
+    }
+
+    .footer_section p {
+        padding: 20px 30px;
+        font-size: 14px;
+    }
+
+    /* Hero Section */
+    .slider_section .detail-box {
+        padding: 30px 15px;
+    }
+
+    .slider_section .detail-box h1 {
+        font-size: 32px;
+    }
+
+    /* Cards and Sections */
+    .who_section .detail-box {
+        margin-left: 15px;
+        margin-top: 35px;
+    }
+
+    .work_section .work_container .box {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    /* Map containers mobile */
+    .map-container {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    /* Testimonials */
+    .container-fluid .col-md-5 {
+        margin-bottom: 20px;
+    }
+
+    /* Button styling mobile */
+    .button-anchor,
+    .button-anchor1 {
+        width: 100%;
+        max-width: 280px;
+    }
+}
+
+/* Small Devices (576px and below) - Mobile Landscape */
+@media (max-width: 576px) {
+    .slider_section .detail-box h1 {
+        font-size: 28px;
+    }
+
+    .slider_section .detail-box p {
+        font-size: 15px;
+        padding: 0 10px;
+    }
+
+    /* Hide some particles on very small screens */
+    .particle:nth-child(n+7) {
+        display: none;
+    }
+
+    /* Navbar brand */
+    .navbar-brand span {
+        font-size: 24px !important;
+    }
+
+    /* Sections padding */
+    .layout_padding {
+        padding: 50px 0;
+    }
+
+    /* CTA sections */
+    .container-fluid h3 {
+        font-size: 20px;
+        padding: 0 15px;
+    }
+}
+
+/* Extra Small Devices (480px and below) - Mobile Portrait */
+@media (max-width: 480px) {
+    .slider_section .detail-box h1 {
+        font-size: 26px;
+    }
+
+    .slider_section .detail-box p br {
+        display: none;
+    }
+
+    /* Footer locations stack */
+    .info_section h5 {
+        font-size: 20px;
+    }
+
+    .location-title {
+        font-size: 20px !important;
+    }
+
+    .text-white-50 {
+        font-size: 13px !important;
+    }
+
+    .contact-info {
+        font-size: 13px;
+    }
+}
+
+/* Very Small Devices (420px and below) */
+@media (max-width: 420px) {
+    .slider_section .detail-box h2 {
+        font-size: 1.5rem;
+    }
+
+    .slider_section .detail-box h1 {
+        font-size: 24px;
+    }
+
+    .navbar-brand span {
+        font-size: 22px !important;
+    }
+
+    .login-btn {
+        padding: 8px 18px !important;
+        font-size: 14px;
+    }
+}
+
+/* Tiny Devices (360px and below) */
+@media (max-width: 360px) {
+    .slider_section .detail-box h1 {
+        font-size: 22px;
+    }
+
+    .slider_section .detail-box p {
+        font-size: 14px;
+    }
+
+    .info_section {
+        padding: 60px 0 30px;
+    }
+}
+
+/* ============================================
+   ANIMATION ENHANCEMENTS
+   ============================================ */
+
+/* Fade animations for sections */
+[data-aos="fade-up"] {
+    transform: translateY(30px);
+    opacity: 0;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+[data-aos="fade-up"].aos-animate {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Better focus states for accessibility */
+a:focus,
+button:focus,
+.nav-link:focus {
+    outline: 2px solid rgba(138, 43, 226, 0.5);
+    outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+
+    .particles,
+    .bg-animated-grid::before,
+    .header_section {
+        display: none !important;
+    }
+}

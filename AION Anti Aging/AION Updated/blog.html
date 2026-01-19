@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blog | AION Longevity</title>
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- AOS Animation CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/responsive.css" rel="stylesheet">
+  <link href="blog.css" rel="stylesheet">
+</head>
+<body>
+  <header class="header_section sticky-top">
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg custom_nav-container pt-1 pb-1">
+        <a class="navbar-brand" href="index.html">
+          <span class="brand-text">AION</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="longevity-program.html" id="longevityDropdown" role="button"
+                aria-haspopup="true" aria-expanded="false">Longevity Program</a>
+              <div class="dropdown-menu" aria-labelledby="longevityDropdown">
+                <a class="dropdown-item" href="longevity-program.html#practitioners">Longevity Practitioners</a>
+                <a class="dropdown-item" href="index.html#programs">Overview</a>
+                <a class="dropdown-item" href="../../AION New Pages/Protocol Page/protocol.html">Protocols</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="diagnosticsDropdown" role="button"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Diagnostics</a>
+              <div class="dropdown-menu" aria-labelledby="diagnosticsDropdown">
+                <a class="dropdown-item" href="diagnostics.html">Overview</a>
+                <a class="dropdown-item" href="blood-tests-detail.html">Extensive Blood Tests</a>
+                <a class="dropdown-item" href="genetic-test-detail.html">Genetic & Epigenetic Testing</a>
+                <a class="dropdown-item" href="gut-microbiota-detail.html">Gut Microbiome Analysis</a>
+                <a class="dropdown-item" href="face-scan-detail.html">Cell Scan & Face Scan</a>
+                <a class="dropdown-item" href="bca-detail.html">Body Composition (BCA)</a>
+                <a class="dropdown-item" href="bmd-detail.html">Bone Mineral Density (BMD)</a>
+                <a class="dropdown-item" href="endopat-detail.html">ENDOPAT</a>
+                <a class="dropdown-item" href="biological-clock-detail.html">Biological Clock</a>
+                <a class="dropdown-item" href="oligoscan-detail.html">OLIGOSCAN</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="offeringsDropdown" role="button"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Offerings</a>
+              <div class="dropdown-menu" aria-labelledby="offeringsDropdown">
+                <a class="dropdown-item" href="diagnostics.html">Diagnostics</a>
+                <a class="dropdown-item" href="longevity-plus-program.html">Longevity Plus Program</a>
+              </div>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="blog.html">Outreach</a></li>
+            <li class="nav-item"><a class="nav-link nav-contact-btn text-white" href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="blog-page">
+
+    <section class="hero small">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-8">
+            <h1>Newsletter and Blogs</h1>
+            <p class="lead">Join our community for the latest updates or explore our articles below.</p>
+          </div>
+          <div class="col-md-4 text-md-right mt-3 mt-md-0">
+            <a href="../../AION New Pages/Newsletter/newsletter.html" class="btn cta">Join Newsletter</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="listing py-5">
+      <div class="container">
+        <div class="row mb-4">
+          <div class="col-12">
+            <h2>News and Articles</h2>
+          </div>
+        </div>
+        <div class="row mb-4 align-items-center">
+          <div class="col-md-6">
+            <div class="search-wrap">
+              <input id="searchInput" type="search" class="form-control" placeholder="Search articles by title or tag">
+            </div>
+          </div>
+          <div class="col-md-6 text-md-right mt-3 mt-md-0">
+            <div class="filters">
+              <button class="filter btn btn-light active" data-filter="all">All</button>
+              <button class="filter btn btn-light" data-filter="research">Research</button>
+              <button class="filter btn btn-light" data-filter="nutrition">Nutrition</button>
+              <button class="filter btn btn-light" data-filter="lifestyle">Lifestyle</button>
+            </div>
+          </div>
+        </div>
+
+        <div id="postsGrid" class="row">
+          <!-- sample post cards -->
+          <article class="col-md-4 mb-4 post-card" data-tags="research">
+            <div class="card h-100">
+              <img src="https://www.innerbuddies.com/cdn/shop/articles/overview-of-biological-age-measurement-methods-3998050.png?v=1751445399&width=1200" class="card-img-top" alt="Measuring Biological Age" style="height: 200px; object-fit: cover;">
+              <div class="card-body d-flex flex-column">
+                <small class="muted">Jan 2, 2026 · Research</small>
+                <h5 class="card-title mt-2">Measuring Biological Age: What it really means</h5>
+                <p class="card-text text-muted">An overview of biological age metrics, interpretation and clinical relevance.</p>
+                <div class="mt-auto"><a href="blog-post.html" class="read-more">Read more →</a></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="col-md-4 mb-4 post-card" data-tags="nutrition">
+            <div class="card h-100">
+              <img src="https://media.licdn.com/dms/image/v2/D4E12AQHyMWfhjyYVnA/article-cover_image-shrink_720_1280/B4EZXsWuXxH0AI-/0/1743427140750?e=2147483647&v=beta&t=TgYLBrjVcn8ug7qQNO0sl4FQ3aI9TyAHnakzBCukiG8" class="card-img-top" alt="Dietary Patterns" style="height: 200px; object-fit: cover;">
+              <div class="card-body d-flex flex-column">
+                <small class="muted">Dec 20, 2025 · Nutrition</small>
+                <h5 class="card-title mt-2">Dietary Patterns that support longevity</h5>
+                <p class="card-text text-muted">Evidence-backed guidance on diet composition for metabolic health.</p>
+                <div class="mt-auto"><a href="blog-post.html" class="read-more">Read more →</a></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="col-md-4 mb-4 post-card" data-tags="lifestyle">
+            <div class="card h-100">
+              <img src="https://madhyamamonline.com/h-upload/2024/11/11/2427864-sleep.webp" class="card-img-top" alt="Sleep & Recovery" style="height: 200px; object-fit: cover;">
+              <div class="card-body d-flex flex-column">
+                <small class="muted">Nov 15, 2025 · Lifestyle</small>
+                <h5 class="card-title mt-2">Sleep & Recovery: Keys to longevity</h5>
+                <p class="card-text text-muted">How sleep quality impacts aging and performance.</p>
+                <div class="mt-auto"><a href="blog-post.html" class="read-more">Read more →</a></div>
+              </div>
+            </div>
+          </article>
+
+          <!-- more sample cards (repeat / duplicate as needed) -->
+          <article class="col-md-4 mb-4 post-card" data-tags="research">
+            <div class="card h-100">
+              <img src="https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/health/wp-content/uploads/2025/11/Best-Biomarkers-For-Longevity-e1764229800650.jpg" class="card-img-top" alt="Biomarkers Guide" style="height: 200px; object-fit: cover;">
+              <div class="card-body d-flex flex-column">
+                <small class="muted">Oct 10, 2025 · Research</small>
+                <h5 class="card-title mt-2">Biomarkers we track and why they matter</h5>
+                <p class="card-text text-muted">A practical guide to our biomarker panel and how to interpret changes.</p>
+                <div class="mt-auto"><a href="blog-post.html" class="read-more">Read more →</a></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="col-md-4 mb-4 post-card" data-tags="nutrition">
+            <div class="card h-100">
+              <img src="https://www.frontiersin.org/image/researchtopic/64873" class="card-img-top" alt="Supplements Evidence" style="height: 200px; object-fit: cover;">
+              <div class="card-body d-flex flex-column">
+                <small class="muted">Sep 5, 2025 · Nutrition</small>
+                <h5 class="card-title mt-2">Supplements: What the evidence supports</h5>
+                <p class="card-text text-muted">An evidence-first overview of supplements used in clinical longevity care.</p>
+                <div class="mt-auto"><a href="blog-post.html" class="read-more">Read more →</a></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="col-md-4 mb-4 post-card" data-tags="lifestyle">
+            <div class="card h-100">
+              <img src="https://cdn.prod.website-files.com/6679dd5828c5c306ef8d7e5c/6897d9d2998c6a22dd0b379c_4f3956ec-ff22-46f0-accd-b15f9dce3571.png" class="card-img-top" alt="Movement & Strength" style="height: 200px; object-fit: cover;">
+              <div class="card-body d-flex flex-column">
+                <small class="muted">Aug 18, 2025 · Lifestyle</small>
+                <h5 class="card-title mt-2">Movement & strength for functional longevity</h5>
+                <p class="card-text text-muted">Training strategies proven to preserve function across decades.</p>
+                <div class="mt-auto"><a href="blog-post.html" class="read-more">Read more →</a></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="col-md-4 mb-4 post-card" data-tags="research">
+            <div class="card h-100">
+              <img src="https://www.sermo.com/wp-content/uploads/2025/08/seo-header-longevity-medicine.jpg" class="card-img-top" alt="Future of Longevity" style="height: 200px; object-fit: cover;">
+              <div class="card-body d-flex flex-column">
+                <small class="muted">July 5, 2025 · Research</small>
+                <h5 class="card-title mt-2">The Future of Longevity Medicine</h5>
+                <p class="card-text text-muted">Emerging therapies and what the next decade holds for healthy aging.</p>
+                <div class="mt-auto"><a href="blog-post.html" class="read-more">Read more →</a></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="col-md-4 mb-4 post-card" data-tags="lifestyle">
+            <div class="card h-100">
+              <img src="https://i.ytimg.com/vi/ytmPYOTxUjg/maxresdefault.jpg" class="card-img-top" alt="Blue Zones" style="height: 200px; object-fit: cover;">
+              <div class="card-body d-flex flex-column">
+                <small class="muted">June 12, 2025 · Lifestyle</small>
+                <h5 class="card-title mt-2">Blue Zones: Lessons from Centenarians</h5>
+                <p class="card-text text-muted">Habits and environments that produce the world's longest-lived people.</p>
+                <div class="mt-auto"><a href="blog-post.html" class="read-more">Read more →</a></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="col-md-4 mb-4 post-card" data-tags="nutrition">
+            <div class="card h-100">
+              <img src="https://www.proteini.si/images/61c7a21d5386e3f765f5f931b6a6107b/proteini.jpg?v26" class="card-img-top" alt="Polyphenols" style="height: 200px; object-fit: cover;">
+              <div class="card-body d-flex flex-column">
+                <small class="muted">May 28, 2025 · Nutrition</small>
+                <h5 class="card-title mt-2">Polyphenols and Gut Health</h5>
+                <p class="card-text text-muted">The interaction between plant compounds and your microbiome.</p>
+                <div class="mt-auto"><a href="blog-post.html" class="read-more">Read more →</a></div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="row">
+          <div class="col-12 text-center">
+            <nav aria-label="Page navigation" class="mt-4">
+              <ul class="pagination justify-content-center" id="pagination"></ul>
+            </nav>
+          </div>
+        </div>
+
+      </div>
+    </section>
+</main>
+
+  <!-- info section / footer -->
+  <section class="info_section ">
+    <div class="container">
+      <div class="row">
+        <!-- Logo & Social Column -->
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="footer-brand">
+            <div class="logo-box mb-3">
+              <span
+                style="font-size: 24px; font-weight: 800; background: var(--gradient-glow); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">THE
+                ANTI-AGING CENTRE</span>
+            </div>
+            <p class="text-white-50">© 2024 TAC The Anti-Aging Centre<br>All rights reserved.</p>
+            <div class="social_box mt-4">
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+            <h5 class="mt-4">Quick Links</h5>
+            <p><a href="about page/about.html" class="text-white hover-underline">About Us</a></p>
+            <p><a href="contact.html" class="text-white hover-underline">Contact Us</a></p>
+            <p><a href="#" class="text-white hover-underline">Privacy Policy</a></p>
+          </div>
+        </div>
+
+        <!-- Gurugram Location -->
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="location-card">
+            <h5 class="location-title">Gurugram</h5>
+            <p class="text-white-50">Block A1, Tikri, Vipul World,<br>Sohna Road, Near GD Goenka Public School, Sector
+              48,<br>Gurugram, Haryana-122018, India.</p>
+            <p class="contact-info"><i class="fas fa-envelope mr-2"></i>info@theantiagingcentre.com</p>
+            <p class="contact-info"><i class="fas fa-phone mr-2"></i>+91 11-408-44848</p>
+            <div class="map-container mt-3">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3507.2!2d77.0562!3d28.4089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDI0JzMyLjAiTiA3N8KwMDMnMjIuMyJF!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin"
+                width="100%" height="120" style="border:0; border-radius: 8px;" allowfullscreen=""
+                loading="lazy"></iframe>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pune Location -->
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="location-card">
+            <h5 class="location-title">Pune</h5>
+            <p class="text-white-50">2nd Floor, Kumar Prism,<br>Amanora road, opp. Fab India,<br>Hadapsar, Pune 411028,
+              Maharashtra.</p>
+            <p class="contact-info"><i class="fas fa-envelope mr-2"></i>info@theantiagingcentre.com</p>
+            <p class="contact-info"><i class="fas fa-phone mr-2"></i>+91 11-408-44840</p>
+            <div class="map-container mt-3">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.3!2d73.9312!3d18.5089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDMwJzMyLjAiTiA3M8KwNTUnNTIuMyJF!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin"
+                width="100%" height="120" style="border:0; border-radius: 8px;" allowfullscreen=""
+                loading="lazy"></iframe>
+            </div>
+          </div>
+        </div>
+
+        <!-- Delhi Location -->
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="location-card">
+            <h5 class="location-title">Delhi</h5>
+            <p class="text-white-50">S-79, Ground Floor, Greater Kailash-1, New Delhi-110048, India</p>
+            <p class="contact-info"><i class="fas fa-envelope mr-2"></i>info@theantiagingcentre.com</p>
+            <p class="contact-info"><i class="fas fa-phone mr-2"></i>+91 80-473-60047</p>
+            <div class="map-container mt-3">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.8!2d77.2312!3d28.5489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDMyJzU2LjAiTiA3N8KwMTMnNTIuMyJF!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin"
+                width="100%" height="120" style="border:0; border-radius: 8px;" allowfullscreen=""
+                loading="lazy"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end info_section -->
+
+  <!-- footer section -->
+  <section class="container-fluid footer_section">
+    <p>
+      Copyright © 2025 AION – Developed by <strong>Dr. Kamal Rawal</strong>.
+    </p>
+  </section>
+  <!-- footer section -->
+
+  <script src="assets/js/jquery-3.4.1.min.js"></script>
+  <script src="assets/js/bootstrap.js"></script>
+  
+  <!-- AOS Animation Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 800,
+      easing: 'ease-out-cubic',
+      once: true,
+      offset: 50
+    });
+
+    // Navbar scroll effect
+    window.addEventListener('scroll', function () {
+      const header = document.querySelector('.header_section');
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  </script>
+  <script src="blog.js"></script>
+</body>
+</html>

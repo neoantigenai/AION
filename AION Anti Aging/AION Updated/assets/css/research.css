@@ -1,0 +1,959 @@
+/* Research Page Modern Styles */
+
+:root {
+    --primary: #8a2be2;
+    --primary-dark: #6a1cb7;
+    --primary-light: #a855f7;
+    --secondary: #4b0082;
+    --dark: #1a1a1a;
+    --light: #f8f9fa;
+    --white: #ffffff;
+    --gradient: linear-gradient(45deg, #8a2be2, #da70d6);
+    --gradient-glow: linear-gradient(135deg, #a855f7 0%, #8a2be2 50%, #6366f1 100%);
+    --neon-blue: #00f3ff;
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --font-main: 'Inter', sans-serif;
+    --font-head: 'Poppins', sans-serif;
+    --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+body.research-page {
+    background-color: #ffffff;
+    font-family: var(--font-main);
+    color: var(--dark);
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: var(--font-head);
+    font-weight: 700;
+}
+
+/* Gradient Text Utility */
+.text-gradient {
+    background: var(--gradient-glow);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.bg-dark-gradient {
+    background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.text-purple {
+    color: var(--primary-light);
+}
+
+.text-neon {
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* ============================
+   Hero Section
+   ============================ */
+.research_hero {
+    position: relative;
+    height: 100vh;
+    min-height: 700px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 50%, #f0f0ff 100%);
+    overflow: hidden;
+}
+
+.hero_bg_animation {
+    display: none;
+    /* Removed synthetic animation */
+}
+
+.hero-side-img {
+    max-height: 500px;
+    object-fit: contain;
+}
+
+.relative-z {
+    position: relative;
+    z-index: 10;
+}
+
+.hero_subtitle {
+    color: var(--primary);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.hero_title {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    color: var(--dark);
+    margin-bottom: 25px;
+}
+
+.hero_desc {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 600px;
+    margin-bottom: 40px;
+}
+
+/* Abstract Tech Globe (CSS Only) */
+.tech_globe_container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Orbit rings removed - replaced with static hero image */
+
+/* Buttons */
+.btn-glow {
+    padding: 15px 35px;
+    background: var(--gradient-glow);
+    color: white;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-shadow: 0 0 20px rgba(138, 43, 226, 0.4);
+    display: inline-block;
+    border: none;
+    margin-right: 15px;
+}
+
+.btn-glow:hover {
+    box-shadow: 0 0 40px rgba(138, 43, 226, 0.6);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.btn-outline-glow {
+    padding: 15px 35px;
+    background: transparent;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    display: inline-block;
+}
+
+.btn-outline-glow:hover {
+    border-color: var(--primary);
+    color: var(--primary-light);
+    background: rgba(138, 43, 226, 0.1);
+}
+
+/* Scroll Indicator */
+.scroll_indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: var(--primary);
+    z-index: 10;
+}
+
+.scroll_indicator span {
+    display: block;
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+
+/* ============================
+   Infinite Horizontal Marquee
+   ============================ */
+.marquee_section {
+    background: #f8f9fa;
+    overflow: hidden;
+    position: relative;
+}
+
+.marquee_container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.marquee_track {
+    display: flex;
+    gap: 30px;
+    animation: scroll 30s linear infinite;
+    will-change: transform;
+}
+
+/* Seamless looping animation */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Pause on hover for accessibility */
+.marquee_track:hover {
+    animation-play-state: paused;
+}
+
+.marquee_item {
+    flex-shrink: 0;
+    width: 350px;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+}
+
+.marquee_item:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 50px rgba(138, 43, 226, 0.2);
+    z-index: 10;
+}
+
+.marquee_item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease, filter 0.6s ease;
+    filter: grayscale(30%);
+}
+
+.marquee_item:hover img {
+    transform: scale(1.1);
+    filter: grayscale(0%);
+}
+
+.marquee_caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.6) 60%, transparent 100%);
+    color: #fff;
+    z-index: 2;
+    transform: translateY(10px);
+    opacity: 0.9;
+    transition: all 0.4s ease;
+}
+
+.marquee_item:hover .marquee_caption {
+    transform: translateY(0);
+    opacity: 1;
+    background: linear-gradient(to top, rgba(138, 43, 226, 0.95) 0%, rgba(138, 43, 226, 0.6) 60%, transparent 100%);
+}
+
+.marquee_caption h5 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #fff;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.marquee_caption p {
+    font-size: 0.95rem;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.95);
+    line-height: 1.5;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .marquee_item {
+        width: 280px;
+        height: 350px;
+    }
+    
+    .marquee_track {
+        gap: 20px;
+        animation: scroll 20s linear infinite;
+    }
+}
+
+
+/* ============================
+   Verticals Cards (Glassmorphism)
+   ============================ */
+.vertical_card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 40px 30px;
+    border-radius: 15px;
+    height: 100%;
+    transition: 0.4s;
+}
+
+.vertical_card:hover {
+    background: rgba(138, 43, 226, 0.1);
+    border-color: var(--primary);
+    transform: translateY(-10px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.icon_box {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    font-size: 24px;
+    color: var(--neon-blue);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.vertical_card h4 {
+    color: var(--dark);
+    margin-bottom: 15px;
+}
+
+.vertical_card p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.vertical_card .read_more {
+    color: var(--primary-light);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.vertical_card .read_more i {
+    font-size: 0.8rem;
+    margin-left: 5px;
+    transition: 0.2s;
+}
+
+.vertical_card:hover .read_more i {
+    margin-left: 10px;
+}
+
+
+/* ============================
+   Multi-Omics (Body) Section
+   ============================ */
+.multi_omics_section {
+    background: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+.multi_omics_section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(138, 43, 226, 0.15) 0%, transparent 70%);
+    z-index: 1;
+}
+
+.human_body_visual {
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+}
+
+.body_img {
+    max-height: 450px;
+    opacity: 1;
+    border-radius: 10px;
+}
+
+.data_point {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 15px white, 0 0 30px var(--neon-blue);
+    animation: pulse 2s infinite;
+}
+
+.p1 {
+    top: 20%;
+    left: 45%;
+}
+
+/* Brain */
+.p2 {
+    top: 35%;
+    right: 40%;
+}
+
+/* Heart/Lungs */
+.p3 {
+    top: 50%;
+    left: 48%;
+}
+
+/* Gut */
+.p4 {
+    top: 70%;
+    right: 55%;
+}
+
+/* Knees/Joints */
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.5);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.omics_list {
+    position: relative;
+    padding-left: 30px;
+    border-left: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.omics_item {
+    position: relative;
+    margin-bottom: 40px;
+    padding-left: 20px;
+}
+
+.omics_item::before {
+    content: attr(data-index);
+    position: absolute;
+    left: -46px;
+    top: 0;
+    background: var(--dark);
+    padding: 5px;
+    color: var(--primary-light);
+    font-weight: 700;
+    font-size: 0.9rem;
+    border: 1px solid rgba(138, 43, 226, 0.5);
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.omics_item h5 {
+    color: var(--dark);
+    margin-bottom: 5px;
+}
+
+.omics_item p {
+    color: #666;
+    margin: 0;
+}
+
+
+/* ============================
+   Stacked Goals Section
+   ============================ */
+
+.stack_section {
+    background: #f8f9fa;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    position: relative;
+}
+
+/* The header stays sticky or just prominent */
+.sticky-header {
+    position: sticky;
+    top: 100px;
+    z-index: 5;
+    background: transparent;
+    /* Or blur */
+    pointer-events: none;
+    /* Let clicks pass through */
+}
+
+/* Container limits width but allows height for scrolling */
+.stack_container {
+    max-width: 1000px;
+    position: relative;
+    /* Height is determined by content, no fixed height */
+}
+
+.stack_card {
+    position: sticky;
+    top: 15vh;
+    /* Stick 15% from top of viewport */
+    height: 60vh;
+    /* Takes up 60% of viewport height */
+    width: 100%;
+    margin-bottom: 100px;
+    /* Space between stacks effectively */
+
+    /* Flex content centering */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1000px;
+}
+
+/* Default card background/border */
+.card_content {
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.98);
+    border: 1px solid rgba(138, 43, 226, 0.15);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    /* Transition for scroll effects if we add JS for scaling later 
+       Essential for the "layering" look */
+    transition: transform 0.5s ease-out, filter 0.5s ease-out;
+}
+
+/* Stacking Order (Z-Index) handled automatically by document flow + sticky?
+   Actually, usually need to force z-index if they overlap weirdly, 
+   but standard sticky behavior usually Stacks naturally: later elements cover earlier ones.
+   
+   If we want the "scaling/dimming" effect mentioned in prompt:
+   - "Some versions... slightly shrink or darken the bottom cards"
+   - This usually requires JS to calculate scroll position relative to card.
+   
+   However, pure CSS sticky gives the basic "holding" effect.
+   We will rely on sticky behavior:
+   Card 1 hits top: 15vh. Stays there.
+   Card 2 scrolls up, hits top: 15vh. Covers Card 1.
+   Card 3 scrolls up, hits top: 15vh. Covers Card 2.
+*/
+
+.card_1 {
+    z-index: 10;
+}
+
+.card_2 {
+    z-index: 20;
+}
+
+.card_3 {
+    z-index: 30;
+}
+
+.card_4 {
+    z-index: 40;
+}
+
+.card_2 {
+    z-index: 20;
+}
+
+.card_3 {
+    z-index: 30;
+}
+
+.card_num {
+    font-size: 5rem;
+    font-weight: 800;
+    color: rgba(138, 43, 226, 0.08);
+    position: absolute;
+    top: 20px;
+    left: 30px;
+}
+
+.stack_card h2 {
+    color: var(--dark);
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.stack_card p {
+    color: #666;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.glass-panel {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* ============================
+   Big Data Section (Replaced mostly, but styles kept just in case)
+   ============================ */
+
+/* ============================
+   CTA
+   ============================ */
+.research_cta {
+    background: linear-gradient(to bottom, #f8f9fa, #ffffff);
+}
+
+.btn-primary-glow {
+    padding: 15px 50px;
+    background: var(--gradient-glow);
+    color: white;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border: none;
+    box-shadow: 0 0 20px rgba(138, 43, 226, 0.5);
+    transition: 0.3s;
+}
+
+.btn-primary-glow:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px rgba(138, 43, 226, 0.8);
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .stack_card {
+        height: auto;
+        position: relative;
+        /* Disable sticky on mobile for better flow */
+        top: 0;
+        margin-bottom: 30px;
+    }
+
+    .hero_title {
+        font-size: 3rem;
+    }
+
+    .tech_globe_container {
+        display: none;
+    }
+
+    .multi_omics_section {
+        text-align: center;
+    }
+
+    .omics_list {
+        text-align: left;
+        margin-left: 20px;
+    }
+}
+
+/* ============================
+   Phase Grids & New Elements
+   ============================ */
+.text-neon {
+    color: var(--neon-blue);
+}
+
+.bg-darker {
+    background: #ffffff;
+    /* Light background */
+}
+
+/* Dark Card Variant (Solid, Less Glass) */
+.dark-card {
+    background: #f8f9fa;
+    border: 1px solid rgba(138, 43, 226, 0.15);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.dark-card:hover {
+    border-color: var(--primary);
+    background: #ffffff;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(138, 43, 226, 0.15);
+    z-index: 5;
+}
+
+.dark-card .icon_box {
+    background: linear-gradient(135deg, rgba(138, 43, 226, 0.1), rgba(138, 43, 226, 0.05));
+    border-color: rgba(138, 43, 226, 0.2);
+}
+
+.phase_header h5 {
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* ============================
+   Personalized Medicine Divider
+   ============================ */
+.personalized_section {
+    border-top: 1px solid rgba(138, 43, 226, 0.1);
+    border-bottom: 1px solid rgba(138, 43, 226, 0.1);
+    background: #ffffff;
+}
+
+.border-glow {
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 20px rgba(138, 43, 226, 0.2);
+}
+
+.stat_item {
+    text-align: left;
+}
+
+.stat_item h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+/* ============================
+   Image Cards (Phase 1 & 2)
+   ============================ */
+.img_card {
+    height: 300px;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.img_card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(138, 43, 226, 0.2);
+}
+
+.img_card_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.4) 60%, rgba(0, 0, 0, 0.1) 100%);
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: #fff;
+}
+
+.card_num_overlay {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.img_card h4 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.img_card p {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 0;
+    line-height: 1.4;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* ============================
+   Refined Multi-Omics Buttons
+   ============================ */
+.omics_list_buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.omics_btn {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.omics_btn:hover {
+    transform: translateX(5px);
+    box-shadow: 0 8px 25px rgba(138, 43, 226, 0.1);
+    border-color: rgba(138, 43, 226, 0.1);
+}
+
+.omics_btn.active {
+    background: #fff;
+    border: 1px solid var(--primary);
+    box-shadow: 0 8px 25px rgba(138, 43, 226, 0.15);
+}
+
+.omics_thumb {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.omics_thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.omics_info {
+    flex-grow: 1;
+    text-align: left;
+}
+
+.omics_info h5 {
+    font-size: 1.1rem;
+    margin: 0 0 4px 0;
+    color: var(--dark);
+    font-weight: 600;
+}
+
+.omics_info small {
+    display: block;
+    font-size: 0.85rem;
+    color: #6c757d;
+}
+
+.omics_toggle {
+    width: 40px;
+    height: 40px;
+    background: #f8f9fa;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--dark);
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.omics_btn:hover .omics_toggle,
+.omics_btn.active .omics_toggle {
+    background: rgba(138, 43, 226, 0.1);
+    color: var(--primary);
+}
+
+/* ============================
+   FOOTER STYLES
+   ============================ */
+.info_section {
+    background-color: rgb(51, 0, 99);
+    color: #ffffff;
+    padding: 90px 0 45px 0;
+}
+
+.info_section h5 {
+    color: #ffffff;
+    margin-bottom: 25px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.info_section p, 
+.info_section a,
+.info_section .text-white-50 {
+    color: rgba(255, 255, 255, 0.6) !important;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.info_section a:hover {
+    color: #ffffff !important;
+    text-decoration: none;
+}
+
+.footer-brand .logo-box span {
+    font-size: 24px;
+    font-weight: 800;
+    background: var(--gradient-glow);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.social_box {
+    display: flex;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.social_box a {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    transition: all 0.3s ease;
+}
+
+.social_box a:hover {
+    background: var(--gradient-glow);
+    transform: translateY(-3px);
+}
+
+.footer_section {
+    background-color: rgb(19, 0, 36);
+    padding: 15px 0;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+}
+
+.footer_section p {
+    padding: 20px 65px;
+    color: #fbfcfd;
+    margin: 0 auto;
+    text-align: center;
+    border-top: 1px solid #ffffff;
+    font-size: 14px;
+}

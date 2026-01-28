@@ -13,17 +13,6 @@ document.addEventListener('DOMContentLoaded', function(){
   window.addEventListener('scroll', updateScrolled);
   if (window.jQuery) { try { $('#navbarSupportedContent').on('shown.bs.collapse hidden.bs.collapse', updateMainPadding); } catch (e) {} }
 
-  // --- FAQ interactions ---
-  const faqQuestions = document.querySelectorAll('.faq-question');
-  faqQuestions.forEach(q => q.addEventListener('click', function(){
-    const target = document.querySelector(this.dataset.target);
-    const open = target.style.display === 'block';
-    // close all
-    document.querySelectorAll('.faq-answer').forEach(a => a.style.display = 'none');
-    document.querySelectorAll('.faq-question').forEach(b => b.classList.remove('active'));
-    if(!open){ target.style.display = 'block'; this.classList.add('active'); }
-  }));
-
   // --- Form & validation ---
   const form = document.getElementById('contactForm');
   const submitBtn = document.getElementById('submitBtn');
@@ -32,14 +21,25 @@ document.addEventListener('DOMContentLoaded', function(){
   function setError(el, message){ el.classList.add('is-invalid'); const id = 'error-' + el.id; const msg = document.getElementById(id); if(msg) msg.textContent = message; }
   function clearError(el){ el.classList.remove('is-invalid'); const id = 'error-' + el.id; const msg = document.getElementById(id); if(msg) msg.textContent = ''; }
 
-  function validate(){ let valid = true; const name = document.getElementById('name'); const email = document.getElementById('email'); const message = document.getElementById('message');
+  function validate(){ let valid = true; const name = document.getElementById('name'); const email = document.getElementById('email'); const phone = document.getElementById('phone'); const message = document.getElementById('message');
     if(!name.value.trim()){ setError(name,'Please enter your name'); valid=false; } else clearError(name);
     if(!email.value.trim()){ setError(email,'Please enter email'); valid=false; } else if(!/^\S+@\S+\.\S+$/.test(email.value)){ setError(email,'Please enter a valid email'); valid=false; } else clearError(email);
+    
+    // Validate phone if it has a value
+    if(phone.value.trim() && !/^\+?[0-9\s-()]{10,15}$/.test(phone.value.trim())){ 
+      setError(phone, 'Please enter a valid phone number'); 
+      valid=false; 
+    } else { 
+      clearError(phone); 
+    }
+
     if(!message.value.trim() || message.value.trim().length < 10){ setError(message,'Message must be at least 10 characters'); valid=false; } else clearError(message);
     return valid;
   }
 
-  if(form){ form.addEventListener('submit', function(e){ e.preventDefault(); statusEl.textContent = ''; if(!validate()){ statusEl.textContent = 'Please fix the highlighted fields.'; return; }
+  if(form){ form.addEventListener('submit', function(e){ e.preventDefault(); 
+      if(statusEl) statusEl.textContent = ''; 
+      if(!validate()){ if(statusEl) statusEl.textContent = 'Please fix the highlighted fields.'; return; }
       // simulate sending
       submitBtn.disabled = true; submitBtn.textContent = 'Sending...'; statusEl.textContent = '';
       setTimeout(function(){ submitBtn.disabled = false; submitBtn.textContent = 'Send message'; form.reset(); statusEl.textContent = 'Thanks! Your message has been sent. We\'ll be in touch shortly.'; statusEl.focus && statusEl.focus(); }, 1100);

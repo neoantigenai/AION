@@ -26,6 +26,96 @@
     
     <!-- Page specific styles -->
     <link rel="stylesheet" href="./longevity-plus-program.css">
+    <style>
+        :root {
+            --primary: #8a2be2;
+            --gradient-glow: linear-gradient(135deg, #a855f7 0%, #8a2be2 50%, #6366f1 100%);
+        }
+        
+        body {
+            background-color: #fcfcfc;
+        }
+
+        .lp-hero {
+            padding: 120px 0 80px;
+            background: radial-gradient(circle at top right, rgba(138, 43, 226, 0.05), transparent 40%),
+                        radial-gradient(circle at bottom left, rgba(99, 102, 241, 0.05), transparent 40%);
+            text-align: center;
+        }
+
+        .text-gradient {
+            background: var(--gradient-glow);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .feature-card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 35px 30px;
+            height: 100%;
+            transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+            border: 1px solid rgba(0,0,0,0.04);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(138, 43, 226, 0.1);
+            border-color: rgba(138, 43, 226, 0.2);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(138, 43, 226, 0.08);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: var(--primary);
+            margin-bottom: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover .feature-icon {
+            background: var(--gradient-glow);
+            color: white;
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .timeline-step {
+            position: relative;
+            padding: 30px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+            border: 1px solid rgba(0,0,0,0.03);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+
+        .timeline-step:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(138, 43, 226, 0.08);
+            border-color: rgba(138, 43, 226, 0.2);
+        }
+
+        .step-badge {
+            display: inline-block;
+            padding: 5px 15px;
+            background: rgba(138, 43, 226, 0.1);
+            color: var(--primary);
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            margin-bottom: 15px;
+        }
+    </style>
 </head>
 <body>
 
@@ -47,7 +137,7 @@
                                 aria-haspopup="true" aria-expanded="false">Longevity Program</a>
                             <div class="dropdown-menu" aria-labelledby="longevityDropdown">
                                 <a class="dropdown-item" href="longevity-program.html#practitioners">Longevity Practitioners</a>
-                                <a class="dropdown-item" href="index.html#programs">Overview</a>
+                                <!-- <a class="dropdown-item" href="index.html#programs">Overview</a> -->
                                 <a class="dropdown-item" href="../../AION New Pages/Protocol Page/protocol.html">Protocols</a>
                             </div>
                         </li>
@@ -76,8 +166,7 @@
                             </div>
                         </li>
                         <li class="nav-item"><a class="nav-link" href="blog.html">Outreach</a></li>
-                        <li class="nav-item"><a class="nav-link nav-contact-btn text-white" href="contact.html">Contact
-                                Us</a></li>
+                        <li class="nav-item"><a class="nav-link nav-contact-btn text-white" href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
             </nav>
@@ -85,97 +174,153 @@
     </header>
 
 
-    <section class="overview">
-        <div class="container">
-            <h2 data-aos="fade-right">Redefining Aging</h2>
-            <p data-aos="fade-left">The Longevity Plus Program combines diagnostics, personalized therapies, and long-term support to help you maintain vitality and health as you age.</p>
-        </div>
-    </section>
-
-    <section class="program-includes" data-aos="fade-up">
-        <div class="container">
-            <h2>This Program Includes</h2>
-            <div class="two-col-list">
-                <ul>
-                    <li>Consultation with senior specialists and personalised planning</li>
-                    <li>Extensive blood test panel & hormonal profiling</li>
-                    <li>Genetic & epigenetic testing</li>
-                    <li>Gut microbiome analysis</li>
-                    <li>Cell scan, face scan and body composition (BCA/BMD)</li>
-                </ul>
-                <ul>
-                    <li>Personalised oral supplements & longevity formulations</li>
-                    <li>Regular follow-ups (monthly/fortnightly) for 12 months</li>
-                    <li>Dietary & lifestyle counselling and app access</li>
-                    <li>Repeat testing & progress tracking</li>
-                    <li>Ongoing physician support and care coordination</li>
-                </ul>
+    <section class="lp-hero">
+        <div class="container" data-aos="fade-up">
+            <span class="badge badge-pill badge-light px-3 py-2 mb-3 shadow-sm" style="color: var(--primary); font-weight: 600;">PREMIUM PROTOCOL</span>
+            <h1 class="display-3 font-weight-bold mb-4">Longevity <span class="text-gradient">Plus</span></h1>
+            <p class="lead text-muted mx-auto mb-5" style="max-width: 700px; line-height: 1.8;">
+                The ultimate high-performance protocol for biological optimization. Combining advanced diagnostics, personalized therapies, and continuous expert support to redefine your aging trajectory.
+            </p>
+            <div class="d-flex justify-content-center">
+                <a href="#contact" class="btn btn-primary rounded-pill px-5 py-3 shadow-lg" style="background: var(--gradient-glow); border: none;">Start Your Journey</a>
             </div>
         </div>
     </section>
 
-    <section class="timeline" data-aos="fade-up">
+    <section class="py-5">
         <div class="container">
-            <h2>Program Timeline (12 months)</h2>
-            <div class="timeline-grid">
-                <div class="visit">
-                    <h3>1st Visit — Initial Assessment</h3>
-                    <ul>
-                        <li>Full assessment and detailed planning</li>
-                        <li>Extensive blood tests, cell and face scans</li>
-                        <li>Body composition and bone density analysis</li>
-                    </ul>
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="font-weight-bold">What's <span class="text-gradient">Included</span></h2>
+                <p class="text-muted">A comprehensive suite of services designed for total biological optimization.</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-user-md"></i></div>
+                        <h4>Expert Consultation</h4>
+                        <p class="text-muted">In-depth planning with senior longevity specialists to craft your personalized roadmap.</p>
+                    </div>
                 </div>
-                <div class="visit">
-                    <h3>2nd Visit — 3-Month Follow-Up</h3>
-                    <ul>
-                        <li>Review tests and adjust treatment plan</li>
-                        <li>Monthly clinical follow-ups and nutrition reviews</li>
-                    </ul>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-vial"></i></div>
+                        <h4>Advanced Diagnostics</h4>
+                        <p class="text-muted">Extensive blood panels, hormonal profiling, genetic & epigenetic testing, and gut microbiome analysis.</p>
+                    </div>
                 </div>
-                <div class="visit">
-                    <h3>3rd Visit — 9-Month Comprehensive Review</h3>
-                    <ul>
-                        <li>Repeat key diagnostics and in-depth review</li>
-                        <li>Adjust long-term maintenance plan as needed</li>
-                    </ul>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-x-ray"></i></div>
+                        <h4>Body Imaging</h4>
+                        <p class="text-muted">Full body composition (BCA), bone density (BMD), cell scan, and face scan analysis.</p>
+                    </div>
                 </div>
-                <div class="visit">
-                    <h3>4th Visit — 12-Month Progress Review</h3>
-                    <ul>
-                        <li>Final assessment, maintenance and next steps</li>
-                    </ul>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-pills"></i></div>
+                        <h4>Personalized Protocol</h4>
+                        <p class="text-muted">Custom-compounded supplements, longevity formulations, and tailored nutritional plans.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+                        <h4>Continuous Tracking</h4>
+                        <p class="text-muted">Regular follow-ups, repeat testing, and progress tracking for 12 months.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="600">
+                    <div class="feature-card">
+                        <div class="feature-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <h4>Digital Health</h4>
+                        <p class="text-muted">App access for lifestyle counseling, diet monitoring, and direct physician support.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="services" data-aos="fade-up">
+    <section class="py-5 bg-light">
         <div class="container">
-            <h2>Basic Assessment and Services Offered</h2>
-            <ul class="services-list">
-                <li>Extensive blood tests (home sample collection available)</li>
-                <li>Cell Scan & Face Scan</li>
-                <li>BCA — Body Composition Analysis</li>
-                <li>BMD — Bone Mineral Density</li>
-                <li>DNA & epigenetic testing (processed in partner labs)</li>
-                <li>Gut microbiota analysis</li>
-                <li>Nutritionist, dermatologist and specialist consultations</li>
-                <li>Personalised supplements and diet planning</li>
-            </ul>
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="font-weight-bold">Your 12-Month <span class="text-gradient">Journey</span></h2>
+                <p class="text-muted">A structured timeline to ensure sustainable results.</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up">
+                    <div class="timeline-step">
+                        <span class="step-badge">Month 1</span>
+                        <h5>Initial Assessment</h5>
+                        <p class="text-muted small mb-0">Full diagnostic workup, baseline establishment, and detailed protocol planning.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="timeline-step">
+                        <span class="step-badge">Month 3</span>
+                        <h5>First Review</h5>
+                        <p class="text-muted small mb-0">Follow-up testing to measure early response. Adjustment of treatment plan and nutrition.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="timeline-step">
+                        <span class="step-badge">Month 9</span>
+                        <h5>Deep Dive</h5>
+                        <p class="text-muted small mb-0">Comprehensive re-evaluation of key diagnostics. Refinement of long-term maintenance strategy.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="timeline-step">
+                        <span class="step-badge">Month 12</span>
+                        <h5>Annual Milestone</h5>
+                        <p class="text-muted small mb-0">Final progress review, biological age reassessment, and planning for the next phase.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section class="locations" id="contact" data-aos="fade-up">
-        <div class="container">
-            <h2>Contact & Centres</h2>
-            <p>To enquire or book a consultation, please contact our centres or use the button below.</p>
-            <div class="center-list">
-                <div>Gurugram — +91 87701 95833</div>
-                <div>Pune — +91 11-408-44840</div>
-                <div>Delhi — +91 80-473-60047</div>
+    <section class="py-5">
+        <div class="container text-center">
+            <h2 class="font-weight-bold mb-5">Comprehensive <span class="text-gradient">Services</span></h2>
+            <div class="d-flex flex-wrap justify-content-center" data-aos="fade-up">
+                <div class="badge badge-pill badge-light px-4 py-3 m-2 shadow-sm" style="font-size: 1rem;"><i class="fas fa-check-circle mr-2 text-success"></i> Extensive Blood Panels</div>
+                <div class="badge badge-pill badge-light px-4 py-3 m-2 shadow-sm" style="font-size: 1rem;"><i class="fas fa-check-circle mr-2 text-success"></i> Epigenetic Testing</div>
+                <div class="badge badge-pill badge-light px-4 py-3 m-2 shadow-sm" style="font-size: 1rem;"><i class="fas fa-check-circle mr-2 text-success"></i> Gut Microbiome</div>
+                <div class="badge badge-pill badge-light px-4 py-3 m-2 shadow-sm" style="font-size: 1rem;"><i class="fas fa-check-circle mr-2 text-success"></i> Body Composition (BCA)</div>
+                <div class="badge badge-pill badge-light px-4 py-3 m-2 shadow-sm" style="font-size: 1rem;"><i class="fas fa-check-circle mr-2 text-success"></i> Bone Density (BMD)</div>
+                <div class="badge badge-pill badge-light px-4 py-3 m-2 shadow-sm" style="font-size: 1rem;"><i class="fas fa-check-circle mr-2 text-success"></i> Face & Cell Scan</div>
+                <div class="badge badge-pill badge-light px-4 py-3 m-2 shadow-sm" style="font-size: 1rem;"><i class="fas fa-check-circle mr-2 text-success"></i> Specialist Consults</div>
+                <div class="badge badge-pill badge-light px-4 py-3 m-2 shadow-sm" style="font-size: 1rem;"><i class="fas fa-check-circle mr-2 text-success"></i> Nutrition Planning</div>
+                <div class="badge badge-pill badge-light px-4 py-3 m-2 shadow-sm" style="font-size: 1rem;"><i class="fas fa-check-circle mr-2 text-success"></i> Home Sample Collection</div>
             </div>
-            <p style="margin-top:20px;"><a href="support us/support.html" class="btn">Book Consultation</a></p>
+        </div>
+    </section>
+
+    <section class="py-5" id="contact" style="background: var(--gradient-glow);">
+        <div class="container text-center text-white" data-aos="zoom-in">
+            <h2 class="font-weight-bold text-white mb-4">Ready to Transform?</h2>
+            <p class="lead mb-5" style="opacity: 0.9;">Book your consultation today at one of our premium centers.</p>
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-3 mb-3">
+                    <div class="p-3 rounded" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(5px);">
+                        <h5 class="font-weight-bold">Gurugram</h5>
+                        <p class="mb-0 small">+91 8882804944</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="p-3 rounded" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(5px);">
+                        <h5 class="font-weight-bold">Noida</h5>
+                        <p class="mb-0 small">+91 8882804944</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="p-3 rounded" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(5px);">
+                        <h5 class="font-weight-bold">Delhi</h5>
+                        <p class="mb-0 small">+91 8882804944</p>
+                    </div>
+                </div>
+            </div>
+            <a href="contact.html" class="btn btn-light rounded-pill px-5 py-3 shadow-lg font-weight-bold" style="color: var(--primary);">Book Consultation</a>
         </div>
     </section>
 
@@ -193,9 +338,10 @@
             </div>
             <p class="text-white-50">© 2025 AION<br>All rights reserved.</p>
             <div class="social_box mt-4">
-              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-              <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+              <a href="https://x.com/HBytesByDrKamal" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.linkedin.com/in/krawal/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="https://www.instagram.com/healthbytesbydrkamal/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.youtube.com/@HBytesByDrKamal" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
             </div>
             <h5 class="mt-4">Quick Links</h5>
             <p><a href="about.html" class="text-white hover-underline">About Us</a></p>
@@ -208,10 +354,9 @@
         <div class="col-lg-3 col-md-6 mb-4">
           <div class="location-card">
             <h5 class="location-title">Gurugram</h5>
-            <p class="text-white-50">Block A1, Tikri, Vipul World,<br>Sohna Road, Near GD Goenka Public School, Sector
-              48,<br>Gurugram, Haryana-122018, India.</p>
-            <p class="contact-info"><i class="fas fa-envelope mr-2"></i>info@theantiagingcentre.com</p>
-            <p class="contact-info"><i class="fas fa-phone mr-2"></i>+91 11-408-44848</p>
+            <p class="text-white-50">xxxxxxxxxxxxxxxxxx</p>
+            <p class="contact-info"><i class="fas fa-envelope mr-2"></i>drkamalrawal888@gmail.com</p>
+            <p class="contact-info"><i class="fas fa-phone mr-2"></i>+91 8882804944</p>
             <div class="map-container mt-3">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3507.2!2d77.0562!3d28.4089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDI0JzMyLjAiTiA3N8KwMDMnMjIuMyJF!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin"
@@ -224,14 +369,13 @@
         <!-- Pune Location -->
         <div class="col-lg-3 col-md-6 mb-4">
           <div class="location-card">
-            <h5 class="location-title">Pune</h5>
-            <p class="text-white-50">2nd Floor, Kumar Prism,<br>Amanora road, opp. Fab India,<br>Hadapsar, Pune 411028,
-              Maharashtra.</p>
-            <p class="contact-info"><i class="fas fa-envelope mr-2"></i>info@theantiagingcentre.com</p>
-            <p class="contact-info"><i class="fas fa-phone mr-2"></i>+91 11-408-44840</p>
+            <h5 class="location-title">Noida</h5>
+            <p class="text-white-50">xxxxxxxxxxxxxxxxxx</p>
+            <p class="contact-info"><i class="fas fa-envelope mr-2"></i>drkamalrawal888@gmail.com</p>
+            <p class="contact-info"><i class="fas fa-phone mr-2"></i>+91 8882804944</p>
             <div class="map-container mt-3">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.3!2d73.9312!3d18.5089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDMwJzMyLjAiTiA3M8KwNTUnNTIuMyJF!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin"
+                src="https://maps.app.goo.gl/th71WKiD5cfbHZSAA"
                 width="100%" height="120" style="border:0; border-radius: 8px;" allowfullscreen=""
                 loading="lazy"></iframe>
             </div>
@@ -242,9 +386,9 @@
         <div class="col-lg-3 col-md-6 mb-4">
           <div class="location-card">
             <h5 class="location-title">Delhi</h5>
-            <p class="text-white-50">S-79, Ground Floor, Greater Kailash-1, New Delhi-110048, India</p>
-            <p class="contact-info"><i class="fas fa-envelope mr-2"></i>info@theantiagingcentre.com</p>
-            <p class="contact-info"><i class="fas fa-phone mr-2"></i>+91 80-473-60047</p>
+            <p class="text-white-50">xxxxxxxxxxxxxxxxxx</p>
+            <p class="contact-info"><i class="fas fa-envelope mr-2"></i>drkamalrawal888@gmail.com</p>
+            <p class="contact-info"><i class="fas fa-phone mr-2"></i>+91 8882804944</p>
             <div class="map-container mt-3">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.8!2d77.2312!3d28.5489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDMyJzU2LjAiTiA3N8KwMTMnNTIuMyJF!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin"

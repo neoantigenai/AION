@@ -22,6 +22,10 @@
     <!-- AOS Animation CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
     <!-- Bootstrap core css -->
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css" />
     <!-- Main styles from home page -->
@@ -52,7 +56,6 @@
                                 aria-haspopup="true" aria-expanded="false">Longevity Program</a>
                             <div class="dropdown-menu" aria-labelledby="longevityDropdown">
                                 <a class="dropdown-item" href="longevity-program.html#practitioners">Longevity Practitioners</a>
-                                <a class="dropdown-item" href="index.html#programs">Overview</a>
                                 <a class="dropdown-item" href="../../AION New Pages/Protocol Page/protocol.html">Protocols</a>
                             </div>
                         </li>
@@ -60,7 +63,6 @@
                             <a class="nav-link dropdown-toggle" href="#" id="diagnosticsDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Diagnostics</a>
                             <div class="dropdown-menu" aria-labelledby="diagnosticsDropdown">
-                                <a class="dropdown-item" href="diagnostics.html">Overview</a>
                                 <a class="dropdown-item" href="blood-tests-detail.html">Extensive Blood Tests</a>
                                 <a class="dropdown-item" href="genetic-test-detail.html">Genetic & Epigenetic Testing</a>
                                 <a class="dropdown-item" href="gut-microbiota-detail.html">Gut Microbiome Analysis</a>
@@ -81,39 +83,62 @@
                             </div>
                         </li>
                         <li class="nav-item"><a class="nav-link" href="blog.html">Outreach</a></li>
-                        <li class="nav-item"><a class="nav-link nav-contact-btn text-white" href="contact.html">Contact
-                                Us</a></li>
+                        <li class="nav-item"><a class="nav-link nav-contact-btn text-white" href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
             </nav>
         </div>
     </header>
 
-    <section class="about-hero" data-aos="zoom-out">
-        <div class="container text-center">
-            <span class="subtitle">An IISc Initiative</span>
-            <h1 class="display-3 font-weight-bold">Redefining the <br><span class="gradient-text">Future of Aging</span>
-            </h1>
-            <p class="lead mt-4 mx-auto" style="max-width: 800px; opacity: 0.8;">
-                Aion leverages AI and clinical precision to extend human healthspan, bridging the gap between biological
-                research and daily longevity.
-            </p>
+    <section class="about-hero" data-aos="fade">
+        <!-- Background Elements -->
+        <div class="hero-bg-animate"></div>
+
+        <div class="container position-relative" style="z-index: 2;">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center">
+                    <div class="hero-pill mb-3" data-aos="fade-down" data-aos-delay="100">
+                        <span class="dot"></span> About AION
+                    </div>
+                    
+                    <h1 class="hero-title mb-3" data-aos="fade-up" data-aos-delay="200">
+                        Redefining the <br>
+                        <span class="text-gradient-primary">Future of Aging</span>
+                    </h1>
+                    
+                    <p class="hero-desc mb-4" data-aos="fade-up" data-aos-delay="300">
+                        AION leverages AI and clinical precision to extend human healthspan, bridging the gap between biological research and daily longevity.
+                    </p>
+
+                    <div class="scroll-down-container" data-aos="fade-up" data-aos-delay="400">
+                        <div class="mouse-icon">
+                            <div class="wheel-dot"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section class="framework-section py-5">
-        <div class="container">
-            <div class="mb-5" data-aos="fade-up">
+    <section class="framework-section py-4 position-relative overflow-hidden">
+        <!-- Decorative background element -->
+        <div style="position: absolute; top: 50%; right: -10%; width: 300px; height: 300px; background: rgba(138, 43, 226, 0.08); filter: blur(60px); border-radius: 50%; z-index: -1; transform: translateY(-50%);"></div>
+
+        <div class="container position-relative" data-aos="fade-up" data-aos-duration="1000">
+            <div class="mb-4" data-aos="fade-up">
                 <h2 class="display-4 font-weight-bold">Our Research <span class="gradient-text">Pillars</span></h2>
             </div>
 
             <div class="row align-items-center">
-                <div class="col-lg-5" data-aos="fade-right">
+                <div class="col-lg-5" data-aos="fade-right" data-aos-delay="200">
                     <div class="acc-item active"
-                        data-img="https://framerusercontent.com/images/n4BXJGWxASrWToKkALUHQjnjtYQ.jpg?scale-down-to=512&width=1280&height=853">
-                        <div class="acc-header">
+                        data-img="https://www.pharmaceutical-technology.com/wp-content/uploads/sites/24/2018/09/shutterstock_782845414-e1599226471457.jpg">
+                        <div class="acc-header d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center">
                             <span class="pillar-number">01</span>
-                            <h5>Clinical Research</h5>
+                            <h5 class="mb-0 ml-3">Clinical Research</h5>
+                            </div>
+                            <i class="fas fa-arrow-right acc-icon"></i>
                         </div>
                         <div class="acc-content">
                             <p>Bridging the gap between biological aging research and clinical applications to extend
@@ -122,10 +147,13 @@
                     </div>
 
                     <div class="acc-item"
-                        data-img="https://framerusercontent.com/images/n4BXJGWxASrWToKkALUHQjnjtYQ.jpg?scale-down-to=512&width=1280&height=853">
-                        <div class="acc-header">
+                        data-img="https://community.firstinspires.org/hubfs/_6528a50b-2d80-4673-a4c0-c7b1e4124cec.jpg" data-aos="fade-up" data-aos-delay="300">
+                        <div class="acc-header d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center">
                             <span class="pillar-number">02</span>
-                            <h5>Artificial Intelligence</h5>
+                            <h5 class="mb-0 ml-3">Artificial Intelligence</h5>
+                            </div>
+                            <i class="fas fa-arrow-right acc-icon"></i>
                         </div>
                         <div class="acc-content">
                             <p>Utilizing deep learning and multi-omics data to identify unique aging biomarkers and
@@ -134,10 +162,13 @@
                     </div>
 
                     <div class="acc-item"
-                        data-img="https://framerusercontent.com/images/n4BXJGWxASrWToKkALUHQjnjtYQ.jpg?scale-down-to=512&width=1280&height=853">
-                        <div class="acc-header">
+                        data-img="https://img.freepik.com/free-vector/healthy-people-carrying-different-icons_53876-66139.jpg?semt=ais_hybrid&w=740&q=80" data-aos="fade-up" data-aos-delay="400">
+                        <div class="acc-header d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center">
                             <span class="pillar-number">03</span>
-                            <h5>Community Health</h5>
+                            <h5 class="mb-0 ml-3">Community Health</h5>
+                            </div>
+                            <i class="fas fa-arrow-right acc-icon"></i>
                         </div>
                         <div class="acc-content">
                             <p>Scaling longevity interventions to ensure high-quality functional years remain consistent
@@ -146,11 +177,88 @@
                     </div>
                 </div>
 
-                <div class="col-lg-7 d-none d-lg-block" data-aos="fade-left">
-                    <div class="image-viewer">
+                <div class="col-lg-6 offset-lg-1 d-none d-lg-block" data-aos="fade-left" data-aos-delay="500">
+                    <div class="image-viewer-wrapper" style="position: relative; padding: 10px;">
+                        <!-- Creative frame effect -->
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 1px solid rgba(138, 43, 226, 0.3); border-radius: 24px; transform: rotate(3deg); z-index: 0;"></div>
+                        
+                        <div class="image-viewer shadow-sm" style="position: relative; z-index: 1; border-radius: 20px; overflow: hidden; height: 320px; background: #fff;">
                         <img id="display-image"
-                            src="https://framerusercontent.com/images/n4BXJGWxASrWToKkALUHQjnjtYQ.jpg?scale-down-to=512&width=1280&height=853"
-                            alt="Research Pillar">
+                            src="https://www.pharmaceutical-technology.com/wp-content/uploads/sites/24/2018/09/shutterstock_782845414-e1599226471457.jpg"
+                            alt="Research Pillar" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="research-preview-section py-5 position-relative overflow-hidden">
+        <!-- Background decoration -->
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); z-index: -2;"></div>
+        <div style="position: absolute; bottom: -10%; left: -10%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(138, 43, 226, 0.05) 0%, transparent 70%); z-index: -1;"></div>
+
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
+                    <div class="d-inline-block px-3 py-1 rounded-pill mb-3" style="background: rgba(138, 43, 226, 0.1); color: #8a2be2; font-weight: 600; font-size: 0.85rem; letter-spacing: 1px;">
+                        <i class="fas fa-microscope mr-2"></i>SCIENTIFIC RIGOR
+                    </div>
+                    <h2 class="display-4 font-weight-bold mb-4">Pioneering <span class="gradient-text">Longevity Research</span></h2>
+                    <p class="lead text-muted mb-4">
+                        Our protocols are backed by <strong>The Bharat Study</strong>, a first-of-its-kind longitudinal study mapping aging biomarkers in the Indian population. We combine clinical precision with multi-omics data to engineer the future of health.
+                    </p>
+                    
+                    <div class="row mb-4">
+                        <div class="col-md-6 mb-3">
+                            <div class="d-flex align-items-center">
+                                <div class="icon-box-sm mr-3" style="width: 40px; height: 40px; font-size: 1rem; flex-shrink: 0;">
+                                    <i class="fas fa-dna text-white"></i>
+                                </div>
+                                <div>
+                                    <h6 class="font-weight-bold mb-0">Multi-Omics</h6>
+                                    <small class="text-muted">Deep biological data</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="d-flex align-items-center">
+                                <div class="icon-box-sm mr-3" style="width: 40px; height: 40px; font-size: 1rem; flex-shrink: 0;">
+                                    <i class="fas fa-users text-white"></i>
+                                </div>
+                                <div>
+                                    <h6 class="font-weight-bold mb-0">Indian Cohort</h6>
+                                    <small class="text-muted">Context-specific</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="research.html" class="btn-primary-glow pulse-button text-white text-decoration-none" style="padding: 12px 30px; font-size: 1rem; margin-top: 0;">
+                        View Our Research <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="position-relative" style="padding: 20px;">
+                        <!-- Main Image with creative border -->
+                        <div class="position-relative" style="z-index: 2; border-radius: 24px; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.15);">
+                            <img src="https://www.prohealth.com/cdn/shop/articles/dna_lab_scientist_7057c198-b1c9-4557-afee-5aaab5c6114a_1445x.jpg?v=1697402395" alt="Research and Science" class="img-fluid w-100" style="object-fit: cover; height: 400px;">
+                            
+                            <!-- Overlay Gradient -->
+                            <div style="position: absolute; bottom: 0; left: 0; width: 100%; height: 50%; background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);"></div>
+                            
+                            <!-- Floating Stats Card -->
+                            <div class="glass-card position-absolute" style="bottom: 20px; right: 20px; padding: 15px 25px; border-radius: 15px; background: rgba(255, 255, 255, 0.9); border: 1px solid rgba(255, 255, 255, 0.5); box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+                                <div class="d-flex align-items-center">
+                                    <h3 class="gradient-text font-weight-bold mb-0 mr-2">10k+</h3>
+                                    <span class="text-dark" style="font-size: 0.8rem; font-weight: 600; line-height: 1.2;">Biomarkers<br>Analyzed</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Decorative Elements behind -->
+                        <div style="position: absolute; bottom: -20px; left: -20px; width: 80px; height: 80px; background-image: radial-gradient(#8a2be2 1px, transparent 1px); background-size: 10px 10px; opacity: 0.3; z-index: 0;"></div>
                     </div>
                 </div>
             </div>
@@ -162,58 +270,89 @@
             <h2 class="font-weight-bold">Why India Needs Longevity Research?</h2>
             <p class="subtitle">(In Indian context)</p>
         </div>
-        <div class="slider-container" data-aos="fade-up">
-            <button class="slider-nav prev"><i class="fas fa-arrow-left"></i></button>
-            <div class="slider-wrapper">
-                <div class="slider-card" data-index="0">
-                    <div class="card-content">
-                        <img src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?auto=format&fit=crop&w=800&q=80"
-                            alt="Diverse Population">
-                        <div class="card-overlay">
-                            <h3>Our diverse population brings unique aging challenges</h3>
+        <div class="container">
+            <div class="owl-carousel owl-theme india-slider">
+                <div class="item">
+                    <div class="slider-card">
+                        <div class="card-content">
+                            <img src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?auto=format&fit=crop&w=800&q=80"
+                                alt="Diverse Population">
+                            <div class="card-overlay">
+                                <h3>Our diverse population brings unique aging challenges</h3>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="slider-card" data-index="1">
-                    <div class="card-content">
-                        <img src="https://images.unsplash.com/photo-1581579438747-1dc8d17bbce4?auto=format&fit=crop&w=800&q=80"
-                            alt="Specific Solutions">
-                        <div class="card-overlay">
-                            <h3>We need India-specific solutions for healthy aging</h3>
+                <div class="item">
+                    <div class="slider-card">
+                        <div class="card-content">
+                            <img src="https://images.unsplash.com/photo-1581579438747-1dc8d17bbce4?auto=format&fit=crop&w=800&q=80"
+                                alt="Specific Solutions">
+                            <div class="card-overlay">
+                                <h3>We need India-specific solutions for healthy aging</h3>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="slider-card" data-index="2">
-                    <div class="card-content">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"
-                            alt="Genetics">
-                        <div class="card-overlay">
-                            <h3>Traditional aging research doesn't fully apply to India's varied genetic and lifestyle
-                                factors</h3>
+                <div class="item">
+                    <div class="slider-card">
+                        <div class="card-content">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"
+                                alt="Genetics">
+                            <div class="card-overlay">
+                                <h3>Traditional aging research doesn't fully apply to India's varied genetic and lifestyle
+                                    factors</h3>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <button class="slider-nav next"><i class="fas fa-arrow-right"></i></button>
-            <div class="slider-dots">
-                <div class="dot active"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
+                <div class="item">
+                    <div class="slider-card">
+                        <div class="card-content">
+                            <img src="https://www.qiagen.com/%5E%5Ecdi=%7B43513A8D-0012-473A-A5A1-570018B04076%7D%5Ehash=/-/media/Project/Qiagen/Qiagen-Home/Service-and-Support/Learning-Hub/Webinars/Generic-Images/CILLU_0097_LS_QF_cancer_keyvisual.jpg"
+                                alt="Cancer Research">
+                            <div class="card-overlay">
+                                <h3>Rising cancer rates in India require targeted longevity interventions and early detection</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="graph-section py-5 bg-dark">
-        <div class="container" data-aos="fade-up">
-            <h2 class="text-white text-center mb-5">Visualizing the <span class="gradient-text">Impact</span></h2>
+    <section class="graph-section py-5 position-relative overflow-hidden">
+        <div class="graph-bg-glow"></div>
+        <div class="container position-relative" style="z-index: 2;">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <span class="subtitle text-white-50">The Longevity Curve</span>
+                <h2 class="text-white display-4 font-weight-bold">Visualizing the <span class="gradient-text">Impact</span></h2>
+            </div>
             <div class="row align-items-center">
-                <div class="col-lg-8">
-                    <canvas id="healthspanChart" width="400" height="200"></canvas>
+                <div class="col-lg-8 mb-5 mb-lg-0" data-aos="fade-right">
+                    <div class="chart-container glass-card p-4">
+                        <canvas id="healthspanChart"></canvas>
+                    </div>
                 </div>
-                <div class="col-lg-4 text-white">
-                    <h4>The Shift</h4>
-                    <p>Our goal is to shift the biological aging curve, ensuring high-quality functional years remain
-                        consistent later into life.</p>
+                <div class="col-lg-4 text-white pl-lg-5" data-aos="fade-left">
+                    <div class="icon-box-sm mb-4">
+                        <i class="fas fa-chart-line text-white"></i>
+                    </div>
+                    <h3 class="font-weight-bold mb-3">The Shift</h3>
+                    <p class="text-white-50 mb-4">
+                        Our goal is to shift the biological aging curve, ensuring high-quality functional years remain consistent later into life. We don't just add years to life, we add life to years.
+                    </p>
+                    
+                    <div class="row mt-4">
+                        <div class="col-6">
+                            <h2 class="gradient-text font-weight-bold mb-0">15+</h2>
+                            <small class="text-white-50 text-uppercase letter-spacing-2">Years Added</small>
+                        </div>
+                        <div class="col-6">
+                            <h2 class="gradient-text font-weight-bold mb-0">40%</h2>
+                            <small class="text-white-50 text-uppercase letter-spacing-2">Risk Reduction</small>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -232,9 +371,10 @@
                         </div>
                         <p class="text-white-50">© 2025 AION<br>All rights reserved.</p>
                         <div class="social_box mt-4">
-                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                            <a href="https://x.com/HBytesByDrKamal" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.linkedin.com/in/krawal/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.instagram.com/healthbytesbydrkamal/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.youtube.com/@HBytesByDrKamal" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                         </div>
                         <h5 class="mt-4">Quick Links</h5>
                         <p><a href="about.html" class="text-white hover-underline">About Us</a></p>
@@ -247,10 +387,9 @@
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="location-card">
                         <h5 class="location-title">Gurugram</h5>
-                        <p class="text-white-50">Block A1, Tikri, Vipul World,<br>Sohna Road, Near GD Goenka Public
-                            School, Sector 48,<br>Gurugram, Haryana-122018, India.</p>
-                        <p class="contact-info"><i class="fas fa-envelope mr-2"></i>info@theantiagingcentre.com</p>
-                        <p class="contact-info"><i class="fas fa-phone mr-2"></i>+91 11-408-44848</p>
+                        <p class="text-white-50">xxxxxxxxxxxxxxxxxx</p>
+                        <p class="contact-info"><i class="fas fa-envelope mr-2"></i>drkamalrawal888@gmail.com</p>
+                        <p class="contact-info"><i class="fas fa-phone mr-2"></i>+91 8882804944</p>
                         <div class="map-container mt-3">
                             <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3507.2!2d77.0562!3d28.4089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDI0JzMyLjAiTiA3N8KwMDMnMjIuMyJF!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin"
@@ -263,27 +402,25 @@
                 <!-- Pune Location -->
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="location-card">
-                        <h5 class="location-title">Pune</h5>
-                        <p class="text-white-50">2nd Floor, Kumar Prism,<br>Amanora road, opp. Fab India,<br>Hadapsar,
-                            Pune 411028, Maharashtra.</p>
-                        <p class="contact-info"><i class="fas fa-envelope mr-2"></i>info@theantiagingcentre.com</p>
-                        <p class="contact-info"><i class="fas fa-phone mr-2"></i>+91 11-408-44840</p>
+                        <h5 class="location-title">Noida</h5>
+                        <p class="text-white-50">xxxxxxxxxxxxxxxxxx</p>
+                        <p class="contact-info"><i class="fas fa-envelope mr-2"></i>drkamalrawal888@gmail.com</p>
+                        <p class="contact-info"><i class="fas fa-phone mr-2"></i>+91 8882804944</p>
                         <div class="map-container mt-3">
                             <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.3!2d73.9312!3d18.5089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDMwJzMyLjAiTiA3M8KwNTUnNTIuMyJF!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin"
+                                src="https://maps.app.goo.gl/th71WKiD5cfbHZSAA"
                                 width="100%" height="120" style="border:0; border-radius: 8px;" allowfullscreen=""
                                 loading="lazy"></iframe>
                         </div>
                     </div>
                 </div>
-
                 <!-- Delhi Location -->
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="location-card">
                         <h5 class="location-title">Delhi</h5>
-                        <p class="text-white-50">S-79, Ground Floor, Greater Kailash-1, New Delhi-110048, India</p>
-                        <p class="contact-info"><i class="fas fa-envelope mr-2"></i>info@theantiagingcentre.com</p>
-                        <p class="contact-info"><i class="fas fa-phone mr-2"></i>+91 80-473-60047</p>
+                        <p class="text-white-50">xxxxxxxxxxxxxxxxxx</p>
+                        <p class="contact-info"><i class="fas fa-envelope mr-2"></i>drkamalrawal888@gmail.com</p>
+                        <p class="contact-info"><i class="fas fa-phone mr-2"></i>+91 8882804944</p>
                         <div class="map-container mt-3">
                             <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.8!2d77.2312!3d28.5489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDMyJzU2LjAiTiA3N8KwMTMnNTIuMyJF!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin"
@@ -292,11 +429,9 @@
                         </div>
                     </div>
                 </div>
-            </div>
         </div>
     </section>
     <!-- end info_section -->
-
     <!-- footer section -->
     <section class="container-fluid footer_section">
         <p>
@@ -308,6 +443,7 @@
     <script type="text/javascript" src="assets/js/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="assets/js/bootstrap.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         // Initialize AOS

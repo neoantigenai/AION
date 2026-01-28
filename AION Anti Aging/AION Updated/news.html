@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>News & Articles | AION Longevity</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- AOS Animation CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css" />
+  <!-- Main styles -->
+  <link href="assets/css/style.css" rel="stylesheet" />
+  <link href="assets/css/responsive.css" rel="stylesheet" />
+
+  <style>
+    :root {
+      --primary: #8a2be2;
+      --gradient-primary: linear-gradient(135deg, #f3e5f5 0%, #e1bee7 100%);
+      --gradient-glow: linear-gradient(135deg, #a855f7 0%, #8a2be2 50%, #6366f1 100%);
+    }
+
+    body {
+      background-color: #fcfcfc;
+    }
+
+    /* Hero Section */
+    .news-hero {
+      background: var(--gradient-primary);
+      padding: 120px 0 80px;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .news-hero h1 {
+      font-weight: 800;
+      color: #1a1a1a;
+      margin-bottom: 1rem;
+    }
+
+    /* News Card Styles */
+    .news-card {
+      border: none;
+      border-radius: 15px;
+      overflow: hidden;
+      background: white;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .news-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(138, 43, 226, 0.1);
+    }
+
+    /* Search and Filter Styles */
+    .search-wrapper {
+      max-width: 600px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 15px 25px;
+      padding-right: 50px;
+      border-radius: 50px;
+      border: 1px solid rgba(138, 43, 226, 0.2);
+      background: white;
+      box-shadow: 0 10px 30px rgba(138, 43, 226, 0.05);
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .search-input:focus {
+      outline: none;
+      box-shadow: 0 10px 30px rgba(138, 43, 226, 0.15);
+      border-color: var(--primary);
+    }
+
+    .search-icon {
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--primary);
+    }
+
+    .filter-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 25px;
+    }
+
+    .filter {
+      border: none;
+      background: white;
+      padding: 10px 28px;
+      border-radius: 50px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #555;
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .filter:hover,
+    .filter.active {
+      background: var(--gradient-glow);
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(138, 43, 226, 0.3);
+    }
+
+    .news-img-wrap {
+      position: relative;
+      height: 200px;
+      overflow: hidden;
+    }
+
+    .news-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .news-card:hover .news-img-wrap img {
+      transform: scale(1.05);
+    }
+
+    .news-date {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .news-body {
+      padding: 25px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .news-category {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #999;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .news-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+      color: #222;
+      line-height: 1.4;
+    }
+    
+    .news-title a {
+        color: inherit;
+        text-decoration: none;
+    }
+    
+    .news-title a:hover {
+        color: var(--primary);
+    }
+
+    .news-excerpt {
+      color: #666;
+      font-size: 0.95rem;
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+
+    .read-more {
+      color: var(--primary);
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+    
+    .read-more:hover {
+        text-decoration: underline;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+  </style>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header_section sticky-top">
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg custom_nav-container pt-1 pb-1">
+        <a class="navbar-brand" href="index.html">
+          <span class="brand-text">AION</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="longevity-program.html" id="longevityDropdown" role="button"
+                aria-haspopup="true" aria-expanded="false">Longevity Program</a>
+              <div class="dropdown-menu" aria-labelledby="longevityDropdown">
+                <a class="dropdown-item" href="longevity-program.html#practitioners">Longevity Practitioners</a>
+                <a class="dropdown-item" href="../../AION New Pages/Protocol Page/protocol.html">Protocols</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="diagnosticsDropdown" role="button"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Diagnostics</a>
+              <div class="dropdown-menu" aria-labelledby="diagnosticsDropdown">
+                <a class="dropdown-item" href="blood-tests-detail.html">Extensive Blood Tests</a>
+                <a class="dropdown-item" href="genetic-test-detail.html">Genetic & Epigenetic Testing</a>
+                <a class="dropdown-item" href="gut-microbiota-detail.html">Gut Microbiome Analysis</a>
+                <a class="dropdown-item" href="face-scan-detail.html">Cell Scan & Face Scan</a>
+                <a class="dropdown-item" href="bca-detail.html">Body Composition (BCA)</a>
+                <a class="dropdown-item" href="bmd-detail.html">Bone Mineral Density (BMD)</a>
+                <a class="dropdown-item" href="endopat-detail.html">ENDOPAT</a>
+                <a class="dropdown-item" href="biological-clock-detail.html">Biological Clock</a>
+                <a class="dropdown-item" href="oligoscan-detail.html">OLIGOSCAN</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="offeringsDropdown" role="button"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Offerings</a>
+              <div class="dropdown-menu" aria-labelledby="offeringsDropdown">
+                <a class="dropdown-item" href="diagnostics.html">Diagnostics</a>
+                <a class="dropdown-item" href="longevity-plus-program.html">Longevity Plus Program</a>
+              </div>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="blog.html">Outreach</a></li>
+            <li class="nav-item"><a class="nav-link nav-contact-btn text-white" href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="news-hero">
+    <div class="container" data-aos="fade-up">
+      <h1 class="display-4">News & <span class="text-gradient-primary" style="background: -webkit-linear-gradient(#8a2be2, #da70d6); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Articles</span></h1>
+      <p class="lead text-muted mb-4">Stay informed with the latest updates, press releases, and in-depth articles from AION.</p>
+
+      <div class="search-wrapper" style="max-width: 600px; margin: 2rem auto 0;">
+        <input type="text" id="newsSearchInput" class="search-input" placeholder="Search news and articles...">
+        <i class="fas fa-search search-icon"></i>
+      </div>
+
+      <div class="filter-container">
+        <button class="filter active" data-filter="all">All</button>
+        <button class="filter" data-filter="partnership">Partnership</button>
+        <button class="filter" data-filter="research">Research</button>
+        <button class="filter" data-filter="event">Event</button>
+        <button class="filter" data-filter="expansion">Expansion</button>
+        <button class="filter" data-filter="technology">Technology</button>
+        <button class="filter" data-filter="community">Community</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- News Grid -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row" id="newsGrid">
+        <!-- News Item 1 -->
+        <div class="col-lg-4 col-md-6 mb-4 news-card-wrapper" data-aos="fade-up" data-category="partnership">
+          <div class="news-card">
+            <div class="news-img-wrap">
+              <img src="assets/images/hero-img.png" alt="News 1">
+              <span class="news-date">Oct 20, 2025</span>
+            </div>
+            <div class="news-body">
+              <div class="news-category">Partnership</div>
+              <h5 class="news-title"><a href="#">AION Launches The Bharat Study</a></h5>
+              <p class="news-excerpt">Pioneering the first longitudinal longevity study in India to map biomarkers of aging.</p>
+              <a href="#" class="read-more">Read More <i class="fas fa-arrow-right ml-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- News Item 2 -->
+        <div class="col-lg-4 col-md-6 mb-4 news-card-wrapper" data-aos="fade-up" data-aos-delay="100" data-category="research">
+          <div class="news-card">
+            <div class="news-img-wrap">
+              <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80" alt="News 2">
+              <span class="news-date">Oct 15, 2025</span>
+            </div>
+            <div class="news-body">
+              <div class="news-category">Research</div>
+              <h5 class="news-title"><a href="#">Partnership Announcement: AION x IISc</a></h5>
+              <p class="news-excerpt">Collaborating on advanced genomic sequencing for the Indian population.</p>
+              <a href="#" class="read-more">Read More <i class="fas fa-arrow-right ml-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- News Item 3 -->
+        <div class="col-lg-4 col-md-6 mb-4 news-card-wrapper" data-aos="fade-up" data-aos-delay="200" data-category="event">
+          <div class="news-card">
+            <div class="news-img-wrap">
+              <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=800&q=80" alt="News 3">
+              <span class="news-date">Oct 05, 2025</span>
+            </div>
+            <div class="news-body">
+              <div class="news-category">Event</div>
+              <h5 class="news-title"><a href="#">Dr. Kamal Rawal at Global Longevity Summit</a></h5>
+              <p class="news-excerpt">Keynote speech on "Democratizing Longevity in Developing Nations".</p>
+              <a href="#" class="read-more">Read More <i class="fas fa-arrow-right ml-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- News Item 4 -->
+        <div class="col-lg-4 col-md-6 mb-4 news-card-wrapper" data-aos="fade-up" data-category="expansion">
+          <div class="news-card">
+            <div class="news-img-wrap">
+              <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=800&q=80" alt="News 4">
+              <span class="news-date">Sep 28, 2025</span>
+            </div>
+            <div class="news-body">
+              <div class="news-category">Expansion</div>
+              <h5 class="news-title"><a href="#">New Clinic Opening in Mumbai</a></h5>
+              <p class="news-excerpt">Expanding our footprint to serve more clients across India with state-of-the-art diagnostics.</p>
+              <a href="#" class="read-more">Read More <i class="fas fa-arrow-right ml-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- News Item 5 -->
+        <div class="col-lg-4 col-md-6 mb-4 news-card-wrapper" data-aos="fade-up" data-aos-delay="100" data-category="technology">
+          <div class="news-card">
+            <div class="news-img-wrap">
+              <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=800&q=80" alt="News 5">
+              <span class="news-date">Sep 10, 2025</span>
+            </div>
+            <div class="news-body">
+              <div class="news-category">Technology</div>
+              <h5 class="news-title"><a href="#">Introducing AI-Driven Biological Age Clock</a></h5>
+              <p class="news-excerpt">Our new proprietary algorithm offers unprecedented accuracy in measuring biological age.</p>
+              <a href="#" class="read-more">Read More <i class="fas fa-arrow-right ml-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- News Item 6 -->
+        <div class="col-lg-4 col-md-6 mb-4 news-card-wrapper" data-aos="fade-up" data-aos-delay="200" data-category="community">
+          <div class="news-card">
+            <div class="news-img-wrap">
+              <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80" alt="News 6">
+              <span class="news-date">Aug 22, 2025</span>
+            </div>
+            <div class="news-body">
+              <div class="news-category">Community</div>
+              <h5 class="news-title"><a href="#">Community Health Initiative Launch</a></h5>
+              <p class="news-excerpt">Bringing longevity science to the grassroots level with our new outreach program.</p>
+              <a href="#" class="read-more">Read More <i class="fas fa-arrow-right ml-1"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div id="noResultsMessage" class="col-12 text-center" style="display: none;">
+          <p class="lead text-muted">No articles found matching your criteria.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-5" style="background-color: #f8f9fa;">
+    <div class="container text-center" data-aos="fade-up">
+      <h2 class="font-weight-bold">Stay Updated</h2>
+      <p class="lead text-muted mb-4">Have questions or want to receive the latest news and articles directly?</p>
+      <a href="contact.html" class="btn btn-primary rounded-pill px-5 py-3" style="background: var(--primary); border: none; box-shadow: 0 5px 15px rgba(138, 43, 226, 0.3);">Contact Us</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <section class="info_section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="footer-brand">
+            <div class="logo-box mb-3">
+              <span style="font-size: 24px; font-weight: 800; background: var(--gradient-glow); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">AION</span>
+            </div>
+            <p class="text-white-50">© 2025 AION<br>All rights reserved.</p>
+            <div class="social_box mt-4">
+              <a href="https://x.com/HBytesByDrKamal" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.linkedin.com/in/krawal/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="https://www.instagram.com/healthbytesbydrkamal/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.youtube.com/@HBytesByDrKamal" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+            <h5 class="mt-4">Quick Links</h5>
+            <p><a href="about.html" class="text-white hover-underline">About Us</a></p>
+            <p><a href="contact.html" class="text-white hover-underline">Contact Us</a></p>
+            <p><a href="#" class="text-white hover-underline">Privacy Policy</a></p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="location-card">
+            <h5 class="location-title">Gurugram</h5>
+            <p class="text-white-50">xxxxxxxxxxxxxxxxxx</p>
+            <p class="contact-info"><i class="fas fa-envelope mr-2"></i>drkamalrawal888@gmail.com</p>
+            <p class="contact-info"><i class="fas fa-phone mr-2"></i>+91 8882804944</p>
+            <div class="map-container mt-3">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3507.2!2d77.0562!3d28.4089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDI0JzMyLjAiTiA3N8KwMDMnMjIuMyJF!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin" width="100%" height="120" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="location-card">
+            <h5 class="location-title">Noida</h5>
+            <p class="text-white-50">xxxxxxxxxxxxxxxxxx</p>
+            <p class="contact-info"><i class="fas fa-envelope mr-2"></i>drkamalrawal888@gmail.com</p>
+            <p class="contact-info"><i class="fas fa-phone mr-2"></i>+91 8882804944</p>
+            <div class="map-container mt-3">
+              <iframe src="https://maps.app.goo.gl/th71WKiD5cfbHZSAA" width="100%" height="120" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="location-card">
+            <h5 class="location-title">Delhi</h5>
+            <p class="text-white-50">xxxxxxxxxxxxxxxxxx</p>
+            <p class="contact-info"><i class="fas fa-envelope mr-2"></i>drkamalrawal888@gmail.com</p>
+            <p class="contact-info"><i class="fas fa-phone mr-2"></i>+91 8882804944</p>
+            <div class="map-container mt-3">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.8!2d77.2312!3d28.5489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDMyJzU2LjAiTiA3N8KwMTMnNTIuMyJF!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin" width="100%" height="120" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container-fluid footer_section">
+    <p>Copyright © 2025 AION – Developed by <strong>Dr. Kamal Rawal</strong>.</p>
+  </section>
+
+  <!-- Scripts -->
+  <script src="assets/js/jquery-3.4.1.min.js"></script>
+  <script src="assets/js/bootstrap.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="assets/js/news.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true });
+    // Navbar scroll effect
+    window.addEventListener('scroll', function () {
+      const header = document.querySelector('.header_section');
+      if (window.scrollY > 50) header.classList.add('scrolled');
+      else header.classList.remove('scrolled');
+    });
+  </script>
+</body>
+</html>

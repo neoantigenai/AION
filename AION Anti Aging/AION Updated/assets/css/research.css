@@ -504,10 +504,12 @@ h5 {
 /* The header stays sticky or just prominent */
 .sticky-header {
     position: sticky;
-    top: 100px;
-    z-index: 5;
-    background: transparent;
-    /* Or blur */
+    top: 80px;
+    z-index: 60;
+    background: rgba(248, 249, 250, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 20px 0;
     pointer-events: none;
     /* Let clicks pass through */
 }
@@ -584,14 +586,6 @@ h5 {
     z-index: 40;
 }
 
-.card_2 {
-    z-index: 20;
-}
-
-.card_3 {
-    z-index: 30;
-}
-
 .card_num {
     font-size: 5rem;
     font-weight: 800;
@@ -611,6 +605,15 @@ h5 {
     color: #666;
     font-size: 1.2rem;
     line-height: 1.6;
+}
+
+/* Enhanced colorful look for Strategic Goals images */
+.stack_card .img_card {
+    filter: saturate(1.2) contrast(1.05);
+}
+
+.stack_card .img_card_overlay {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(138, 43, 226, 0.25) 50%, transparent 100%);
 }
 
 .glass-panel {
@@ -878,82 +881,4 @@ h5 {
 .omics_btn.active .omics_toggle {
     background: rgba(138, 43, 226, 0.1);
     color: var(--primary);
-}
-
-/* ============================
-   FOOTER STYLES
-   ============================ */
-.info_section {
-    background-color: rgb(51, 0, 99);
-    color: #ffffff;
-    padding: 90px 0 45px 0;
-}
-
-.info_section h5 {
-    color: #ffffff;
-    margin-bottom: 25px;
-    font-size: 24px;
-    font-weight: 700;
-}
-
-.info_section p, 
-.info_section a,
-.info_section .text-white-50 {
-    color: rgba(255, 255, 255, 0.6) !important;
-    font-size: 14px;
-    line-height: 1.6;
-}
-
-.info_section a:hover {
-    color: #ffffff !important;
-    text-decoration: none;
-}
-
-.footer-brand .logo-box span {
-    font-size: 24px;
-    font-weight: 800;
-    background: var(--gradient-glow);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.social_box {
-    display: flex;
-    gap: 12px;
-    margin-top: 20px;
-}
-
-.social_box a {
-    background: rgba(255, 255, 255, 0.1);
-    color: #ffffff;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 38px;
-    height: 38px;
-    transition: all 0.3s ease;
-}
-
-.social_box a:hover {
-    background: var(--gradient-glow);
-    transform: translateY(-3px);
-}
-
-.footer_section {
-    background-color: rgb(19, 0, 36);
-    padding: 15px 0;
-    font-weight: 500;
-    display: flex;
-    justify-content: center;
-}
-
-.footer_section p {
-    padding: 20px 65px;
-    color: #fbfcfd;
-    margin: 0 auto;
-    text-align: center;
-    border-top: 1px solid #ffffff;
-    font-size: 14px;
 }

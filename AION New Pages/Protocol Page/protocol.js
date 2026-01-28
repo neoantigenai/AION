@@ -1,46 +1,4 @@
-// Slider Functionality
-const initializeSliders = () => {
-    const sliders = document.querySelectorAll('[data-slider]');
-    
-    sliders.forEach(slider => {
-        const sliderName = slider.getAttribute('data-slider');
-        const wrapper = slider.closest('.slider-wrapper');
-        
-        if (!wrapper) return;
-        
-        const prevBtn = wrapper.querySelector('.prev-btn[data-slider="' + sliderName + '"]');
-        const nextBtn = wrapper.querySelector('.next-btn[data-slider="' + sliderName + '"]');
-        
-        if (!prevBtn || !nextBtn) return;
-        
-        let currentIndex = 0;
-        const slides = slider.querySelectorAll('.slide');
-        const totalSlides = slides.length;
-        const itemsPerView = 3; // Show 3 items at a time
-        
-        const updateSlider = () => {
-            const offset = -currentIndex * (100 / itemsPerView);
-            slider.style.transform = `translateX(${offset}%)`;
-        };
-        
-        prevBtn.addEventListener('click', () => {
-            currentIndex = Math.max(currentIndex - 1, 0);
-            updateSlider();
-        });
-        
-        nextBtn.addEventListener('click', () => {
-            if (currentIndex < totalSlides - itemsPerView) {
-                currentIndex += 1;
-            }
-            updateSlider();
-        });
-    });
-};
-
-// Example: Add simple animations or dynamic content interactions
 document.addEventListener('DOMContentLoaded', () => {
-    // Initialize sliders first
-    initializeSliders();
     
     // 1. Scroll Reveal Animation
     const revealElements = document.querySelectorAll('.reveal');
@@ -127,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     copyBtns.forEach(btn => {
         btn.addEventListener('click', (e) => {
-            const card = e.target.closest('.data-card');
+            const card = e.target.closest('.data-card') || e.target.closest('.supplement-card');
             const list = card.querySelector('ul');
             const textToCopy = list.innerText;
 
@@ -141,77 +99,26 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 5. Slider Logic for Multiple Sliders
-    const initializeSlider = (sliderName) => {
-        // Robust selector: tries to find by data attribute, falls back to generic class for 'habits' if missing
-        const sliderTrack = document.querySelector(`.slider-track[data-slider="${sliderName}"]`);
-        
-        if (!sliderTrack) return;
-
-        const slides = Array.from(sliderTrack.children);
-        // Find buttons relative to the track's container to ensure we get the correct ones
-        const container = sliderTrack.closest('.slider-container');
-        const wrapper = container.parentElement;
-        const nextBtn = wrapper.querySelector('.next-btn');
-        const prevBtn = wrapper.querySelector('.prev-btn');
-
-        // Calculate movement distance (card width + gap)
-        // Note: CSS gap is 20px.
-        const getMoveAmount = () => {
-            if (slides.length === 0) return 0;
-            const slide = slides[0];
-            const style = window.getComputedStyle(slide);
-            const width = slide.offsetWidth;
-            // Assuming gap is 25px from CSS .slider-track { gap: 25px }
-            // We can also compute it if needed, but hardcoding for performance is fine if CSS matches
-            return width + 25;
-        };
-
-        let currentPosition = 0;
-
-        const updateSlider = () => {
-            sliderTrack.style.transform = `translateX(-${currentPosition}px)`;
-        };
-
-        if (nextBtn) {
-            nextBtn.addEventListener('click', () => {
-                const containerWidth = container.clientWidth;
-                const trackWidth = getMoveAmount() * slides.length - 25; // Total width minus last gap
-                const maxScroll = trackWidth - containerWidth;
-
-                if (currentPosition < maxScroll) {
-                    currentPosition += getMoveAmount();
-                    if (currentPosition > maxScroll) currentPosition = maxScroll; // Clamp to end
-                } else {
-                    currentPosition = 0; // Loop back to start
-                }
-                updateSlider();
-            });
-        }
-
-        if (prevBtn) {
-            prevBtn.addEventListener('click', () => {
-                if (currentPosition > 0) {
-                    currentPosition -= getMoveAmount();
-                    if (currentPosition < 0) currentPosition = 0; // Clamp to start
-                } else {
-                    // Optional: Loop to end could go here
-                }
-                updateSlider();
-            });
-        }
-
-        // Reset on resize to prevent alignment issues
-        window.addEventListener('resize', () => {
-            currentPosition = 0;
-            updateSlider();
+    // 5. Initialize Owl Carousel for Sliders
+    if (typeof $ !== 'undefined' && $.fn.owlCarousel) {
+        $('.protocol-slider').owlCarousel({
+            loop: true,
+            margin: 20,
+            nav: true,
+            dots: true,
+            autoplay: true,
+            autoplayTimeout: 5000,
+            autoplayHoverPause: true,
+            smartSpeed: 1000,
+            navText: ['<i class="fas fa-chevron-left"></i>', '<i class="fas fa-chevron-right"></i>'],
+            responsive: {
+                0: { items: 1 },
+                768: { items: 2, margin: 20 },
+                1000: { items: 3 },
+                1200: { items: 3 }
+            }
         });
-    };
-
-    // Initialize all sliders
-    initializeSlider('habits'); // Existing habits slider (no data-slider attribute, so assume default)
-    initializeSlider('diet');
-    initializeSlider('biomarkers');
+    }
 
     console.log("Blueprint Protocol Page Loaded Successfully.");
 });

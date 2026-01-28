@@ -395,7 +395,7 @@ a {
 }
 
 /* Contact Us button styling */
-.nav-contact-btn {
+.custom_nav-container.navbar-expand-lg .navbar-nav .nav-link.nav-contact-btn {
   background: var(--gradient-glow) !important;
   color: #ffffff !important;
   padding: 8px 22px !important;
@@ -413,7 +413,7 @@ a {
   justify-content: center;
 }
 
-.nav-contact-btn::before {
+.custom_nav-container.navbar-expand-lg .navbar-nav .nav-link.nav-contact-btn::before {
   content: '';
   position: absolute;
   top: 0;
@@ -424,12 +424,12 @@ a {
   transition: 0.5s;
 }
 
-.nav-contact-btn:hover::before {
+.custom_nav-container.navbar-expand-lg .navbar-nav .nav-link.nav-contact-btn:hover::before {
   left: 100%;
 }
 
-.nav-contact-btn:hover,
-.nav-contact-btn:focus {
+.custom_nav-container.navbar-expand-lg .navbar-nav .nav-link.nav-contact-btn:hover,
+.custom_nav-container.navbar-expand-lg .navbar-nav .nav-link.nav-contact-btn:focus {
   transform: translateY(-3px) scale(1.05) !important;
   box-shadow: 0 8px 25px rgba(138, 43, 226, 0.5) !important;
   color: #ffffff !important;
@@ -438,7 +438,7 @@ a {
   background: linear-gradient(135deg, #7820c4, #b833ff) !important;
 }
 
-.nav-contact-btn:active {
+.custom_nav-container.navbar-expand-lg .navbar-nav .nav-link.nav-contact-btn:active {
   transform: translateY(-1px) scale(0.98) !important;
 }
 
@@ -537,7 +537,7 @@ a {
 .info_section {
   background-color: rgb(51, 0, 99);
   color: #ffffff;
-  padding: 90px 0 45px 0;
+  padding: 60px 0 30px 0;
 }
 
 .info_section h5 {
@@ -608,7 +608,7 @@ a {
 }
 
 .info_section .footer-brand p a {
-  display: block;
+  display: inline-block;
   margin-bottom: 8px;
 }
 
@@ -651,11 +651,10 @@ a {
 }
 
 .footer_section p {
-  padding: 20px 65px;
+  padding: 15px 65px;
   color: #fbfcfd;
   margin: 0 auto;
   text-align: center;
-  border-top: 1px solid #ffffff;
 }
 
 .footer_section a {

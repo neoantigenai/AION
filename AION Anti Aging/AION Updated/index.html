@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <!-- Basic -->
   <meta charset="utf-8" />
@@ -11,14 +10,12 @@
   <meta name="keywords" content="Longevity, Anti-Aging, Health, Wellness, AION" />
   <meta name="description" content="AION - India's First Longevity Protocol" />
   <meta name="author" content="AION" />
-
   <title>AION | Longevity & Wellness</title>
 
   <!-- Google Fonts -->
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;600;700;800&display=swap"
     rel="stylesheet">
-
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
@@ -36,6 +33,7 @@
   <!-- responsive style -->
   <link href="assets/css/responsive.css" rel="stylesheet" />
 </head>
+
 
 <body>
   <div class="hero_area">
@@ -59,12 +57,12 @@
                   aria-haspopup="true" aria-expanded="false">Longevity Program</a>
                 <div class="dropdown-menu" aria-labelledby="longevityDropdown">
                   <a class="dropdown-item" href="longevity-program.html#practitioners">Longevity Practitioners</a>
-                  <a class="dropdown-item" href="index.html#programs">Overview</a>
-                  <a class="dropdown-item" href="../../AION New Pages/Protocol Page/protocol.html">Protocols</a>
+                  <!-- <a class="dropdown-item" href="#programs">Overview</a> -->
+                  <a class="dropdown-item" href="../../AION%20New%20Pages/Protocol%20Page/protocol.html">Protocols</a>
                 </div>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="diagnosticsDropdown" role="button"
+                <a class="nav-link dropdown-toggle" href="diagnostics.html" id="diagnosticsDropdown" role="button"
                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Diagnostics</a>
                 <div class="dropdown-menu" aria-labelledby="diagnosticsDropdown">
                   <a class="dropdown-item" href="diagnostics.html">Overview</a>
@@ -88,8 +86,7 @@
                 </div>
               </li>
               <li class="nav-item"><a class="nav-link" href="blog.html">Outreach</a></li>
-              <li class="nav-item"><a class="nav-link nav-contact-btn text-white" href="contact.html">Contact
-                                Us</a></li>
+              <li class="nav-item"><a class="nav-link nav-contact-btn text-white" href="contact.html">Contact Us</a></li>
             </ul>
           </div>
         </nav>
@@ -205,23 +202,30 @@
 
 
 
-  <div id="programs" class="container-fluid" style="background-color: blueviolet;">
-    <div class="row py-4" style="justify-content: space-evenly;">
-      <div class="col-md-11 my-5">
-        <iframe width="100%" height="700px" src="https://www.youtube.com/embed/naYNtdAnpaY"
-          title="A Call to Prioritize Longevity and Health" frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <div id="programs" class="container-fluid position-relative overflow-hidden" style="background: linear-gradient(135deg, #8a2be2 0%, #4b0082 100%);">
+    <!-- Decorative Elements -->
+    <div style="position: absolute; top: -10%; left: -5%; width: 400px; height: 400px; background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%); pointer-events: none;"></div>
+    <div style="position: absolute; bottom: -10%; right: -5%; width: 300px; height: 300px; background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%); pointer-events: none;"></div>
+
+    <div class="row py-5 justify-content-center align-items-center">
+      <div class="col-lg-8 col-md-10 mb-5" data-aos="zoom-in">
+        <div class="shadow-lg" style="border-radius: 20px; overflow: hidden; border: 1px solid rgba(255,255,255,0.2); transform: translateZ(0);">
+          <iframe width="100%" height="500px" src="https://www.youtube.com/embed/naYNtdAnpaY"
+            title="A Call to Prioritize Longevity and Health" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display: block;"></iframe>
+        </div>
       </div>
     </div>
-    <div class="row" style="justify-content: space-evenly;">
-      <div class="col-md-10">
-        <h2 class="text-center text-white" style="font-size: 48px;">Introducing India's First Longevity Protocol</h2>
-        <p class="text-center my-4 text-white" style="font-size: 19px;">The "Mito" series by Human Edge consists of
+    <div class="row justify-content-center pb-5">
+      <div class="col-md-10 text-center" data-aos="fade-up">
+        <h2 class="text-white font-weight-bold mb-4" style="font-size: clamp(2rem, 4vw, 3rem);">Introducing India's First Longevity Protocol</h2>
+        <p class="text-white-50 mb-5 mx-auto" style="font-size: 1.2rem; max-width: 800px; line-height: 1.6;">The "Mito" series by Human Edge consists of
           longevity programs designed to help no matter where you are on your longevity journey. Jumpstart it with Mito
           Start or maximise impact with Mito+.</p>
-        <h1 style="text-align: center; margin-bottom: 70px;"> <a href="contact.html" class="button-anchor">Learn
-            More</a></h1>
+        <div style="margin-bottom: 50px;">
+          <a href="contact.html" class="btn btn-light rounded-pill px-5 py-3 font-weight-bold shadow-lg hover-scale" style="color: #4b0082; font-size: 1.1rem;">Learn More</a>
+        </div>
       </div>
     </div>
   </div>
@@ -326,7 +330,6 @@
     </div>
 
 
-
     <div class="row mt-5" style="justify-content: space-evenly;">
       <div class="col-md-9">
         <h1 class="text-center" style="color: yellow; font-size: 40px;">03. <span class="text-white">Take action</span>
@@ -345,6 +348,7 @@
           insights and adjustments to help build a health-first lifestyle. </p>
       </div>
     </div>
+
 
     <div class="container">
       <div class="row" style="justify-content: space-evenly;">
@@ -533,8 +537,6 @@
   </section>
 
 
-
-
   <div class="container-fluid py-5" style="background-color: blueviolet">
     <div class="row" style="justify-content: space-evenly;">
       <div class="col-md-10">
@@ -567,7 +569,6 @@
   </div>
 
 
-
   <div class="container my-5">
     <div class="row pt-3">
       <h2 style="font-size: 55px; font-weight: 500;">Our Impact</h2>
@@ -598,6 +599,7 @@
       </div>
     </div>
   </div>
+
 
   <div class="container">
     <div class="row" style="justify-content: space-evenly;">
@@ -669,9 +671,6 @@
   </div>
 
 
-
-
-
   <div class="container-fluid my-5" style="background: var(--gradient-primary);">
     <div class="row" style="justify-content: space-evenly;">
       <div class="col-md-9 my-5" data-aos="fade-up">
@@ -685,18 +684,6 @@
       </div>
     </div>
   </div>
-
-
-
-
-
-
-
-
-
-
-
-
   <!-- info section / footer -->
   <section class="info_section ">
     <div class="container">
@@ -710,9 +697,10 @@
             </div>
             <p class="text-white-50">© 2025 AION<br>All rights reserved.</p>
             <div class="social_box mt-4">
-              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-              <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+              <a href="https://x.com/HBytesByDrKamal" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.linkedin.com/in/krawal/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="https://www.instagram.com/healthbytesbydrkamal/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.youtube.com/@HBytesByDrKamal" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
             </div>
             <h5 class="mt-4">Quick Links</h5>
             <p><a href="about.html" class="text-white hover-underline">About Us</a></p>
@@ -721,14 +709,14 @@
           </div>
         </div>
 
+        
         <!-- Gurugram Location -->
         <div class="col-lg-3 col-md-6 mb-4">
           <div class="location-card">
             <h5 class="location-title">Gurugram</h5>
-            <p class="text-white-50">Block A1, Tikri, Vipul World,<br>Sohna Road, Near GD Goenka Public School, Sector
-              48,<br>Gurugram, Haryana-122018, India.</p>
-            <p class="contact-info"><i class="fas fa-envelope mr-2"></i>info@theantiagingcentre.com</p>
-            <p class="contact-info"><i class="fas fa-phone mr-2"></i>+91 11-408-44848</p>
+            <p class="text-white-50">xxxxxxxxxxxxxxxxxx</p>
+            <p class="contact-info"><i class="fas fa-envelope mr-2"></i>drkamalrawal888@gmail.com</p>
+            <p class="contact-info"><i class="fas fa-phone mr-2"></i>+91 8882804944</p>
             <div class="map-container mt-3">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3507.2!2d77.0562!3d28.4089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDI0JzMyLjAiTiA3N8KwMDMnMjIuMyJF!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin"
@@ -741,14 +729,13 @@
         <!-- Pune Location -->
         <div class="col-lg-3 col-md-6 mb-4">
           <div class="location-card">
-            <h5 class="location-title">Pune</h5>
-            <p class="text-white-50">2nd Floor, Kumar Prism,<br>Amanora road, opp. Fab India,<br>Hadapsar, Pune 411028,
-              Maharashtra.</p>
-            <p class="contact-info"><i class="fas fa-envelope mr-2"></i>info@theantiagingcentre.com</p>
-            <p class="contact-info"><i class="fas fa-phone mr-2"></i>+91 11-408-44840</p>
+            <h5 class="location-title">Noida</h5>
+            <p class="text-white-50">xxxxxxxxxxxxxxxxxx</p>
+            <p class="contact-info"><i class="fas fa-envelope mr-2"></i>drkamalrawal888@gmail.com</p>
+            <p class="contact-info"><i class="fas fa-phone mr-2"></i>+91 8882804944</p>
             <div class="map-container mt-3">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.3!2d73.9312!3d18.5089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDMwJzMyLjAiTiA3M8KwNTUnNTIuMyJF!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin"
+                src="https://maps.app.goo.gl/th71WKiD5cfbHZSAA"
                 width="100%" height="120" style="border:0; border-radius: 8px;" allowfullscreen=""
                 loading="lazy"></iframe>
             </div>
@@ -759,9 +746,9 @@
         <div class="col-lg-3 col-md-6 mb-4">
           <div class="location-card">
             <h5 class="location-title">Delhi</h5>
-            <p class="text-white-50">S-79, Ground Floor, Greater Kailash-1, New Delhi-110048, India</p>
-            <p class="contact-info"><i class="fas fa-envelope mr-2"></i>info@theantiagingcentre.com</p>
-            <p class="contact-info"><i class="fas fa-phone mr-2"></i>+91 80-473-60047</p>
+            <p class="text-white-50">xxxxxxxxxxxxxxxxxx</p>
+            <p class="contact-info"><i class="fas fa-envelope mr-2"></i>drkamalrawal888@gmail.com</p>
+            <p class="contact-info"><i class="fas fa-phone mr-2"></i>+91 8882804944</p>
             <div class="map-container mt-3">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.8!2d77.2312!3d28.5489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDMyJzU2LjAiTiA3N8KwMTMnNTIuMyJF!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin"

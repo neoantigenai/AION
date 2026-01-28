@@ -15,6 +15,37 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" />
     <link rel="stylesheet" href="assets/css/longevity-program.css">
+    <style>
+        .pillars_section {}
+
+        .pillar-card {
+            background: #ffffff;
+            border-radius: 15px;
+            padding: 40px 30px;
+            text-align: center;
+            height: 100%;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+            border: 1px solid #e9ecef;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .pillar-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(138, 43, 226, 0.15);
+        }
+
+        .pillar-icon {
+            font-size: 36px;
+            color: var(--primary);
+            margin-bottom: 20px;
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+            line-height: 80px;
+            border-radius: 50%;
+            background: rgba(138, 43, 226, 0.1);
+        }
+    </style>
 </head>
 
 <body>
@@ -37,7 +68,6 @@
                                 aria-haspopup="true" aria-expanded="false">Longevity Program</a>
                             <div class="dropdown-menu" aria-labelledby="longevityDropdown">
                                 <a class="dropdown-item" href="#practitioners">Longevity Practitioners</a>
-                                <a class="dropdown-item" href="index.html#programs">Overview</a>
                                 <a class="dropdown-item" href="../../AION New Pages/Protocol Page/protocol.html">Protocols</a>
                             </div>
                         </li>
@@ -85,7 +115,7 @@
                             <a href="#join" class="btn_cta">Start Your Longevity Journey</a>
                         </div>
                         <div class="col-md-6 order-1 order-md-2 text-center">
-                            <img src="assets/images/Kamal Rawal Image.png" alt="Dr. Kamal Rawal"
+                            <img src="assets/images/Kamal Rawal Slider.png" alt="Dr. Kamal Rawal"
                                 class="img-fluid milind-img">
                         </div>
                     </div>
@@ -153,7 +183,7 @@
                 <div class="item">
                     <div class="practitioner_card text-center">
                         <div class="img-container">
-                            <img src="assets/images/Kamal Rawal Image.png" alt="Dr. Kamal Rawal" class="practitioner-img">
+                            <img src="assets/images/Kamal_Rawal_Image2.png" alt="Dr. Kamal Rawal" class="practitioner-img">
                         </div>
                         <div class="practitioner_info mt-4">
                             <h3>Dr. Kamal Rawal</h3>
@@ -251,7 +281,7 @@
             <div class="owl-carousel video_slider">
                 <div class="item">
                     <div class="video_wrapper shadow-lg">
-                        <iframe width="100%" height="500" src="https://www.youtube.com/watch?v=SgkN0UR0N-A"
+                        <iframe width="100%" height="500" src="https://www.youtube.com/embed/SgkN0UR0N-A"
                             frameborder="0" allowfullscreen></iframe>
                     </div>
                     <h5 class="text-white mt-3">Milind Soman's Journey</h5>
@@ -336,24 +366,37 @@
         </div>
     </section>
 
-    <section class="trusted_section py-5">
-        <div class="container text-center">
-            <h2 class="mb-5">Trusted by Experts, Powered by Technology, Backed by Science.</h2>
-            <div class="row align-items-center">
-                <div class="col-md-4 mb-4">
-                    <img src="assets/images/expert1.avif" class="expert-img" alt="Dr. Marcus Ranney">
-                    <h5>Dr. Marcus Ranney</h5>
-                    <p class="small">Longevity Physician</p>
+    <section class="pillars_section py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="gradient-text">Our Foundation: Science, Technology, and Expertise</h2>
+                <p class="lead text-muted">Our approach is built on three core pillars, ensuring a comprehensive and
+                    effective longevity program.</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="pillar-card">
+                        <div class="pillar-icon"><i class="fas fa-user-md"></i></div>
+                        <h3>Trusted by Experts</h3>
+                        <p>Our science is guided by world-renowned leaders in aging research and performance science,
+                            ensuring our protocols are at the forefront of clinical practice.</p>
+                    </div>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <img src="assets/images/expert2.avif" class="expert-img" alt="Nir Barzilai">
-                    <h5>Nir Barzilai</h5>
-                    <p class="small">Aging Research Director</p>
+                <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="pillar-card">
+                        <div class="pillar-icon"><i class="fas fa-cogs"></i></div>
+                        <h3>Powered by Technology</h3>
+                        <p>We leverage cutting-edge diagnostics, AI-driven analysis, and multi-omics data to create a
+                            high-resolution picture of your health and track your progress with precision.</p>
+                    </div>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <img src="assets/images/expert3.avif" class="expert-img" alt="John Gloster">
-                    <h5>John Gloster</h5>
-                    <p class="small">Sports Scientist</p>
+                <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="pillar-card">
+                        <div class="pillar-icon"><i class="fas fa-flask"></i></div>
+                        <h3>Backed by Science</h3>
+                        <p>Our protocols are rooted in rigorous scientific evidence and validated through pioneering
+                            research, including our own longitudinal studies on the Indian population.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -426,9 +469,10 @@
                         </div>
                         <p class="text-white-50">© 2025 AION<br>All rights reserved.</p>
                         <div class="social_box mt-4">
-                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                            <a href="https://x.com/HBytesByDrKamal" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.linkedin.com/in/krawal/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.instagram.com/healthbytesbydrkamal/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.youtube.com/@HBytesByDrKamal" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                         </div>
                         <h5 class="mt-4">Quick Links</h5>
                         <p><a href="about.html" class="text-white hover-underline">About Us</a></p>
@@ -441,11 +485,9 @@
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="location-card">
                         <h5 class="location-title">Gurugram</h5>
-                        <p class="text-white-50">Block A1, Tikri, Vipul World,<br>Sohna Road, Near GD Goenka Public
-                            School, Sector
-                            48,<br>Gurugram, Haryana-122018, India.</p>
-                        <p class="contact-info"><i class="fas fa-envelope mr-2"></i>info@theantiagingcentre.com</p>
-                        <p class="contact-info"><i class="fas fa-phone mr-2"></i>+91 11-408-44848</p>
+                        <p class="text-white-50">xxxxxxxxxxxxxxxxxx</p>
+                        <p class="contact-info"><i class="fas fa-envelope mr-2"></i>drkamalrawal888@gmail.com</p>
+                        <p class="contact-info"><i class="fas fa-phone mr-2"></i>+91 8882804944</p>
                         <div class="map-container mt-3">
                             <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3507.2!2d77.0562!3d28.4089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDI0JzMyLjAiTiA3N8KwMDMnMjIuMyJF!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin"
@@ -458,14 +500,13 @@
                 <!-- Pune Location -->
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="location-card">
-                        <h5 class="location-title">Pune</h5>
-                        <p class="text-white-50">2nd Floor, Kumar Prism,<br>Amanora road, opp. Fab India,<br>Hadapsar,
-                            Pune 411028, Maharashtra.</p>
-                        <p class="contact-info"><i class="fas fa-envelope mr-2"></i>info@theantiagingcentre.com</p>
-                        <p class="contact-info"><i class="fas fa-phone mr-2"></i>+91 11-408-44840</p>
+                        <h5 class="location-title">Noida</h5>
+                        <p class="text-white-50">xxxxxxxxxxxxxxxxxx</p>
+                        <p class="contact-info"><i class="fas fa-envelope mr-2"></i>drkamalrawal888@gmail.com</p>
+                        <p class="contact-info"><i class="fas fa-phone mr-2"></i>+91 8882804944</p>
                         <div class="map-container mt-3">
                             <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.3!2d73.9312!3d18.5089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDMwJzMyLjAiTiA3M8KwNTUnNTIuMyJF!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin"
+                                src="https://maps.app.goo.gl/th71WKiD5cfbHZSAA"
                                 width="100%" height="120" style="border:0; border-radius: 8px;" allowfullscreen=""
                                 loading="lazy"></iframe>
                         </div>
@@ -476,9 +517,9 @@
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="location-card">
                         <h5 class="location-title">Delhi</h5>
-                        <p class="text-white-50">S-79, Ground Floor, Greater Kailash-1, New Delhi-110048, India</p>
-                        <p class="contact-info"><i class="fas fa-envelope mr-2"></i>info@theantiagingcentre.com</p>
-                        <p class="contact-info"><i class="fas fa-phone mr-2"></i>+91 80-473-60047</p>
+                        <p class="text-white-50">xxxxxxxxxxxxxxxxxx</p>
+                        <p class="contact-info"><i class="fas fa-envelope mr-2"></i>drkamalrawal888@gmail.com</p>
+                        <p class="contact-info"><i class="fas fa-phone mr-2"></i>+91 8882804944</p>
                         <div class="map-container mt-3">
                             <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.8!2d77.2312!3d28.5489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDMyJzU2LjAiTiA3N8KwMTMnNTIuMyJF!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin"

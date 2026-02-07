@@ -112,7 +112,8 @@
   content: none !important;
   display: none !important;
 }
-.custoground: var(--gradient-glow) !important;
+.nav-contact-btn {
+  background: var(--gradient-glow) !important;
   color: #ffffff !important;
   padding: 8px 22px !important;
   border-radius: 50px !important;
@@ -128,10 +129,13 @@
   align-items: center;
   justify-content: center;
 }
-.-3px) scale(1.05) !important;
+
+.nav-contact-btn:hover {
+  transform: translateY(-3px) scale(1.05) !important;
   box-shadow: 0 8px 25px rgba(138, 43, 226, 0.5) !important;
   color: #ffffff !important;
 }
+
 .brand-text {
   font-size: 28px;
   font-weight: 800;

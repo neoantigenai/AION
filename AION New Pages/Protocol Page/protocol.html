@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Protocols | The Anti-Aging Centre</title>
-
+    <title>Protocols | AION</title>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;600;700;800&display=swap"
         rel="stylesheet">
@@ -18,10 +16,106 @@
     <link rel="stylesheet" href="../../AION Anti Aging/AION Updated/assets/css/responsive.css" />
     <link rel="stylesheet" href="../../AION Anti Aging/AION Updated/assets/css/longevity-program.css">
     <link rel="stylesheet" href="./protocol.css">
+    <style>
+        .protocol-slider .owl-stage {
+            display: flex;
+        }
+        .protocol-slider .owl-item {
+            display: flex;
+            flex: 1 0 auto;
+        }
+        .protocol-slider .item {
+            width: 100%;
+        }
+
+        /* Global Leaders Section */
+        #global-leaders {
+            background-color: #f8f9fa;
+        }
+
+        .leader-card {
+            background: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.07);
+            text-align: center;
+            padding: 30px;
+            padding-top: 60px;
+            position: relative;
+            height: 100%;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid #f0f0f0;
+        }
+
+        .leader-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 25px 50px rgba(138, 43, 226, 0.15);
+        }
+
+        .leader-image-wrapper {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: -90px auto 20px;
+            position: relative;
+            border: 5px solid #ffffff;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .leader-image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .leader-name {
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .leader-title {
+            font-weight: 500;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .leader-bio {
+            font-size: 0.95rem;
+            color: #666;
+            line-height: 1.6;
+            min-height: 100px; /* To align cards */
+        }
+
+        .leader-social {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .leader-social a {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f8f9fa;
+            border-radius: 50%;
+            color: #888;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .leader-social a:hover {
+            background: var(--gradient-glow);
+            color: white;
+            transform: scale(1.1);
+        }
+    </style>
 </head>
-
 <body>
-
     <header class="header_section sticky-top">
         <div class="container-fluid">
             <nav class="navbar navbar-expand-lg custom_nav-container pt-1 pb-1">
@@ -37,37 +131,40 @@
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item"><a class="nav-link" href="../../AION Anti Aging/AION Updated/about.html">About Us</a></li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="longevityDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Longevity Program</a>
+                            <a class="nav-link dropdown-toggle" href="../../AION Anti Aging/AION Updated/longevity-program.html" id="longevityDropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">Longevity Program</a>
                             <div class="dropdown-menu" aria-labelledby="longevityDropdown">
                                 <a class="dropdown-item" href="../../AION Anti Aging/AION Updated/longevity-program.html#practitioners">Longevity Practitioners</a>
-                                <a class="dropdown-item" href="../../AION Anti Aging/AION Updated/index.html#programs">Overview</a>
+                                <!-- <a class="dropdown-item" href="../../AION Anti Aging/AION Updated/index.html#programs">Overview</a> -->
                                 <a class="dropdown-item" href="protocol.html">Protocols</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="diagnosticsDropdown" role="button"
+                            <a class="nav-link dropdown-toggle" href="../../AION Anti Aging/AION Updated/diagnostics.html" id="diagnosticsDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Diagnostics</a>
                             <div class="dropdown-menu" aria-labelledby="diagnosticsDropdown">
                                 <a class="dropdown-item" href="../../AION Anti Aging/AION Updated/diagnostics.html">Overview</a>
-                                <a class="dropdown-item" href="../../AION Anti Aging/AION Updated/index.html#biomarkers">Biomarker Analysis</a>
-                                <a class="dropdown-item" href="../../AION Anti Aging/AION Updated/index.html#biological-age">Biological Age
-                                    Testing</a>
-                                <a class="dropdown-item" href="../../AION Anti Aging/AION Updated/index.html#metabolic">Metabolic Health</a>
+                                <a class="dropdown-item" href="../../AION Anti Aging/AION Updated/blood-tests-detail.html">Extensive Blood Tests</a>
+                                <a class="dropdown-item" href="../../AION Anti Aging/AION Updated/genetic-test-detail.html">Genetic & Epigenetic Testing</a>
+                                <a class="dropdown-item" href="../../AION Anti Aging/AION Updated/gut-microbiota-detail.html">Gut Microbiome Analysis</a>
+                                <a class="dropdown-item" href="../../AION Anti Aging/AION Updated/face-scan-detail.html">Cell Scan & Face Scan</a>
+                                <a class="dropdown-item" href="../../AION Anti Aging/AION Updated/bca-detail.html">Body Composition (BCA)</a>
+                                <a class="dropdown-item" href="../../AION Anti Aging/AION Updated/bmd-detail.html">Bone Mineral Density (BMD)</a>
+                                <a class="dropdown-item" href="../../AION Anti Aging/AION Updated/endopat-detail.html">ENDOPAT</a>
+                                <a class="dropdown-item" href="../../AION Anti Aging/AION Updated/biological-clock-detail.html">Biological Clock</a>
+                                <a class="dropdown-item" href="../../AION Anti Aging/AION Updated/oligoscan-detail.html">OLIGOSCAN</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="offeringsDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Offerings</a>
                             <div class="dropdown-menu" aria-labelledby="offeringsDropdown">
-                                <a class="dropdown-item" href="../../AION Anti Aging/AION Updated/index.html#mito-start">Mito Start</a>
-                                <a class="dropdown-item" href="../../AION Anti Aging/AION Updated/index.html#mito-plus">Mito+</a>
-                                <a class="dropdown-item" href="../../AION Anti Aging/AION Updated/index.html#consultations">Consultations</a>
+                                <a class="dropdown-item" href="../../AION Anti Aging/AION Updated/diagnostics.html">Diagnostics</a>
+                                <a class="dropdown-item" href="../../AION Anti Aging/AION Updated/longevity-plus-program.html">Longevity Plus Program</a>
                             </div>
                         </li>
                         <li class="nav-item"><a class="nav-link" href="../../AION Anti Aging/AION Updated/blog.html">Outreach</a></li>
-                        <li class="nav-item"><a class="nav-link nav-contact-btn text-white" href="../../AION Anti Aging/AION Updated/contact.html">Contact
-                                Us</a></li>
+                        <li class="nav-item"><a class="nav-link nav-contact-btn text-white" href="../../AION Anti Aging/AION Updated/contact.html">Contact Us</a></li>
                     </ul>
                 </div>
             </nav>
@@ -80,7 +177,7 @@
                 <div class="d-inline-block px-3 py-1 rounded-pill mb-3" style="background: rgba(138, 43, 226, 0.1); color: #8a2be2; font-weight: 600; font-size: 0.85rem; letter-spacing: 1px;">
                     SCIENTIFICALLY VALIDATED
                 </div>
-                <h1 class="display-4 font-weight-bold mb-3">The Unified <span class="text-gradient">Longevity Protocol</span></h1>
+                <h1 class="display-4 font-weight-bold mb-3">Introducing India's First <span class="text-gradient">Longevity Protocol</span></h1>
                 <p class="lead text-muted mx-auto" style="max-width: 700px;">A holistic approach to healthspan, integrating data-driven biohacking with principles of natural, sustainable living.</p>
             </div>
         </div>
@@ -94,29 +191,29 @@
             </div>
             
             <div class="owl-carousel owl-theme protocol-slider">
-                <div class="item">
-                    <div class="data-card text-center p-4">
+                <div class="item h-100">
+                    <div class="data-card text-center p-4 h-100">
                         <i class="fas fa-utensils habit-icon fa-2x text-primary mb-3"></i>
                         <h3>Disciplined Nutrition</h3>
                         <p>Prioritizing whole foods, strategic eating windows, and avoiding processed items.</p>
                     </div>
                 </div>
-                <div class="item">
-                    <div class="data-card text-center p-4">
+                <div class="item h-100">
+                    <div class="data-card text-center p-4 h-100">
                         <i class="fas fa-shoe-prints habit-icon fa-2x text-success mb-3"></i>
                         <h3>Functional Movement</h3>
                         <p>Combining strength, agility, and flexibility with sustainable, daily activity.</p>
                     </div>
                 </div>
-                <div class="item">
-                    <div class="data-card text-center p-4">
+                <div class="item h-100">
+                    <div class="data-card text-center p-4 h-100">
                         <i class="fas fa-moon habit-icon fa-2x text-info mb-3"></i>
                         <h3>Prioritized Sleep</h3>
                         <p>Viewing sleep as the most critical meeting for cellular repair and rejuvenation.</p>
                     </div>
                 </div>
-                <div class="item">
-                    <div class="data-card text-center p-4">
+                <div class="item h-100">
+                    <div class="data-card text-center p-4 h-100">
                         <i class="fas fa-brain habit-icon fa-2x text-danger mb-3"></i>
                         <h3>Mental Stillness</h3>
                         <p>Cultivating a positive, stress-free mindset through consistency and mindfulness.</p>
@@ -304,6 +401,50 @@
                 </div>   
             </section>
 
+    <!-- Global Leaders Section -->
+    <section id="global-leaders" class="reveal py-5">
+        <div class="container" data-aos="fade-up">
+            <div class="section-header text-center mb-5">
+                <h3 class="font-weight-bold">Guided by Global <span class="text-gradient">Longevity Leaders</span></h3>
+                <p class="text-muted">Our protocol is shaped by the visionaries and pioneers at the forefront of aging research and human performance.</p>
+            </div>
+            <div class="row justify-content-center">
+                <!-- Leader 1: Dr. Kamal Rawal -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="leader-card">
+                        <div class="leader-image-wrapper">
+                            <img src="../../AION Anti Aging/AION Updated/assets/images/Kamal_Rawal_Image2.png" alt="Dr. Kamal Rawal">
+                        </div>
+                        <div class="leader-info">
+                            <h4 class="leader-name">Dr. Kamal Rawal</h4>
+                            <p class="leader-title">Official Brand Ambassador</p>
+                            <p class="leader-bio">A pioneer in longevity science, combining clinical expertise with cutting-edge diagnostics to reverse biological aging.</p>
+                            <div class="leader-social">
+                                <a href="https://www.linkedin.com/in/krawal/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="https://x.com/HBytesByDrKamal" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Leader 2: Bryan Johnson -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="leader-card">
+                        <div class="leader-image-wrapper">
+                            <img src="../../AION Anti Aging/AION Updated/assets/images/Bryan Johnson.png" alt="Bryan Johnson">
+                        </div>
+                        <div class="leader-info">
+                            <h4 class="leader-name">Bryan Johnson</h4>
+                            <p class="leader-title">Longevity Enthusiast</p>
+                            <p class="leader-bio">Leading the charge in data-driven anti-aging protocols, demonstrating the power of disciplined lifestyle interventions.</p>
+                             <div class="leader-social">
+                                <a href="https://www.blueprint.bryanjohnson.co/" target="_blank" aria-label="Website"><i class="fas fa-globe"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- Footer -->
     <section class="info_section ">
         <div class="container">
@@ -317,10 +458,10 @@
                         </div>
                         <p class="text-white-50">© 2025 AION<br>All rights reserved.</p>
                         <div class="social_box mt-4">
-                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                            <a href="https://x.com/HBytesByDrKamal" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.linkedin.com/in/krawal/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.instagram.com/healthbytesbydrkamal/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.youtube.com/@HBytesByDrKamal" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                         </div>
                         <h5 class="mt-4">Quick Links</h5>
                         <p><a href="../../AION Anti Aging/AION Updated/about.html" class="text-white hover-underline">About Us</a></p>
@@ -333,11 +474,9 @@
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="location-card">
                         <h5 class="location-title">Gurugram</h5>
-                        <p class="text-white-50">Block A1, Tikri, Vipul World,<br>Sohna Road, Near GD Goenka Public
-                            School, Sector
-                            48,<br>Gurugram, Haryana-122018, India.</p>
-                        <p class="contact-info"><i class="fas fa-envelope mr-2"></i>info@theantiagingcentre.com</p>
-                        <p class="contact-info"><i class="fas fa-phone mr-2"></i>+91 11-408-44848</p>
+                        <p class="text-white-50">xxxxxxxxxxxxxxxxxx</p>
+                        <p class="contact-info"><i class="fas fa-envelope mr-2"></i>drkamalrawal888@gmail.com</p>
+                        <p class="contact-info"><i class="fas fa-phone mr-2"></i>+91 8882804944</p>
                         <div class="map-container mt-3">
                             <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3507.2!2d77.0562!3d28.4089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDI0JzMyLjAiTiA3N8KwMDMnMjIuMyJF!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin"
@@ -351,8 +490,8 @@
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="location-card">
                         <h5 class="location-title">Noida</h5>
-                        <p class="text-white-50">Amity University, Noida</p>
-                        <p class="contact-info"><i class="fas fa-envelope mr-2"></i>info@theantiagingcentre.com</p>
+                        <p class="text-white-50">xxxxxxxxxxxxxxxxxx</p>
+                        <p class="contact-info"><i class="fas fa-envelope mr-2"></i>drkamalrawal888@gmail.com</p>
                         <p class="contact-info"><i class="fas fa-phone mr-2"></i>+91 8882804944</p>
                         <div class="map-container mt-3">
                             <iframe
@@ -367,9 +506,9 @@
                 <div class="col-lg-3 col-md-6 mb-4">
                     <div class="location-card">
                         <h5 class="location-title">Delhi</h5>
-                        <p class="text-white-50">S-79, Ground Floor, Greater Kailash-1, New Delhi-110048, India</p>
-                        <p class="contact-info"><i class="fas fa-envelope mr-2"></i>info@theantiagingcentre.com</p>
-                        <p class="contact-info"><i class="fas fa-phone mr-2"></i>+91 80-473-60047</p>
+                        <p class="text-white-50">xxxxxxxxxxxxxxxxxx</p>
+                        <p class="contact-info"><i class="fas fa-envelope mr-2"></i>drkamalrawal888@gmail.com</p>
+                        <p class="contact-info"><i class="fas fa-phone mr-2"></i>+91 8882804944</p>
                         <div class="map-container mt-3">
                             <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.8!2d77.2312!3d28.5489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDMyJzU2LjAiTiA3N8KwMTMnNTIuMyJF!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin"
@@ -419,5 +558,4 @@
     </script>
     <script src="./protocol.js"></script>
 </body>
-
 </html>
